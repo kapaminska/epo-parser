@@ -1,7 +1,8 @@
-"""Single-file XML → PDF conversion pipeline."""
+"""XML → PDF conversion pipeline (single file and batch)."""
 
 from __future__ import annotations
 
+from collections.abc import Iterable
 from pathlib import Path
 
 from domain.conversion import ConversionResult
@@ -44,3 +45,11 @@ def convert_xml_file(
         warnings=list(document.warnings),
         tracking_number=tracking_number,
     )
+
+
+def convert_xml_files(xml_paths: Iterable[Path]) -> list[ConversionResult]:
+    """Convert multiple EPO XML files; continue on per-file errors.
+
+    Result order matches input order. An empty iterable yields an empty list.
+    """
+    return [convert_xml_file(path) for path in xml_paths]

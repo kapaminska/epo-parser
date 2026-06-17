@@ -10,6 +10,12 @@ from domain.naming import resolve_summary_path
 
 def format_summary(results: list[ConversionResult]) -> str:
     """Build a human-readable Polish summary for one or more conversion results."""
+    if not results:
+        return (
+            "Podsumowanie konwersji EPO\n"
+            "Brak plików XML w bieżącym katalogu.\n"
+        )
+
     lines: list[str] = [
         "Podsumowanie konwersji EPO",
         f"Liczba plików: {len(results)}",

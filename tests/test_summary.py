@@ -51,6 +51,14 @@ def test_format_summary_failure() -> None:
     assert "Błąd: Nierozpoznany format pliku XML." in text
 
 
+def test_format_summary_empty_results() -> None:
+    text = format_summary([])
+
+    assert "Podsumowanie konwersji EPO" in text
+    assert "Brak plików XML w bieżącym katalogu." in text
+    assert "Liczba plików: 0" not in text
+
+
 def test_format_summary_multiple_results() -> None:
     results = [
         ConversionResult(
