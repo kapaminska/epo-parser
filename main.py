@@ -6,11 +6,6 @@ import argparse
 import sys
 from pathlib import Path
 
-from domain.conversion import ConversionResult
-from domain.discovery import discover_xml_files
-from domain.pipeline import convert_xml_file, convert_xml_files
-from domain.summary import write_summary
-
 _MISSING_FILE_MESSAGE = "Nie znaleziono pliku wejściowego."
 
 
@@ -27,7 +22,10 @@ def resolve_summary_directory(paths: list[Path]) -> Path:
     return Path.cwd()
 
 
-def _process_explicit_paths(paths: list[Path]) -> list[ConversionResult]:
+def _process_explicit_paths(paths: list[Path]) -> list:
+    from domain.conversion import ConversionResult
+    from domain.pipeline import convert_xml_file
+
     results: list[ConversionResult] = []
     for path in paths:
         if not path.exists():
@@ -60,6 +58,10 @@ def main(argv: list[str] | None = None) -> int:
         help="Ścieżki do plików XML EPO (puste = wszystkie *.xml w bieżącym katalogu)",
     )
     args = parser.parse_args(argv)
+
+    from domain.discovery import discover_xml_files
+    from domain.pipeline import convert_xml_files
+    from domain.summary import write_summary
 
     if not args.paths:
         summary_dir = Path.cwd()

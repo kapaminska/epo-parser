@@ -1,14 +1,17 @@
 # -*- mode: python ; coding: utf-8 -*-
 """PyInstaller spec for one-file Windows console build of epo-parser.exe."""
 
+import os
+
 from PyInstaller.utils.hooks import collect_all
 
 block_cipher = None
+spec_root = os.path.abspath(SPECPATH)
 
 lxml_datas, lxml_binaries, lxml_hiddenimports = collect_all("lxml")
 
 datas = [
-    ("pdf/assets/DejaVuSans.ttf", "pdf/assets"),
+    (os.path.join(spec_root, "pdf", "assets", "DejaVuSans.ttf"), "pdf/assets"),
 ] + lxml_datas
 
 hiddenimports = [
@@ -17,11 +20,22 @@ hiddenimports = [
     "fpdf",
     "fontTools",
     "fontTools.ttLib",
+    "domain",
+    "domain.conversion",
+    "domain.discovery",
+    "domain.naming",
+    "domain.pipeline",
+    "domain.summary",
+    "domain.model",
+    "parsers",
+    "parsers.pp_edoreczenia",
+    "pdf",
+    "pdf.renderer",
 ] + lxml_hiddenimports
 
 a = Analysis(
-    ["main.py"],
-    pathex=["."],
+    [os.path.join(spec_root, "main.py")],
+    pathex=[spec_root],
     binaries=lxml_binaries,
     datas=datas,
     hiddenimports=hiddenimports,
