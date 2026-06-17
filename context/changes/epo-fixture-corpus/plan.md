@@ -341,10 +341,10 @@ Not applicable — greenfield foundation slice. Existing six XML fixtures are ke
 
 #### Automated
 
-- [x] 3.1 `pytest -v` — all non-skipped tests pass
-- [x] 3.2 `pytest tests/test_fixture_corpus.py -v` — structural tests green
-- [x] 3.3 Skipped parser golden tests visible in pytest output (6 cases)
+- [x] 3.1 `pytest -v` — all non-skipped tests pass — 93e6fee
+- [x] 3.2 `pytest tests/test_fixture_corpus.py -v` — structural tests green — 93e6fee
+- [x] 3.3 Skipped parser golden tests visible in pytest output (6 cases) — 93e6fee
 
 #### Manual
 
-- [x] 3.4 Structural test run succeeds on macOS dev venv
+- [x] 3.4 Structural test run succeeds on macOS dev venv — 93e6fee
