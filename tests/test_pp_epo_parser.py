@@ -14,8 +14,6 @@ import yaml
 from conftest import FIXTURES_DIR, load_manifest
 from helpers import assert_document_matches_golden
 
-pytestmark = pytest.mark.skip(reason="Parser not implemented — enable in S-01")
-
 
 @pytest.mark.parametrize("entry", load_manifest(), ids=lambda entry: entry["id"])
 def test_parse_matches_golden(entry: dict) -> None:
