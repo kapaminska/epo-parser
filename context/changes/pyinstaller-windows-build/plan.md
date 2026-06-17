@@ -270,13 +270,13 @@ No data migration. Developers on macOS continue using `python main.py` / `pytest
 
 #### Manual
 
-- [ ] 2.3 Push to `main` produces green CI run with artifact
-- [ ] 2.4 Log shows `--help` smoke output and `.exe` size in MB
+- [x] 2.3 Push to `main` produces green CI run with artifact — a6897fc
+- [x] 2.4 Log shows `--help` smoke output and `.exe` size in MB — a6897fc
 
 ### Phase 3: Size Reporting & S-05 Handoff
 
 #### Manual
 
-- [ ] 3.1 First CI size recorded in F-02 `change.md` Notes
-- [ ] 3.2 S-05 `change.md` notes F-02 artifact available
-- [ ] 3.3 Team reviews size vs PRD ≤ 80 MB target
+- [x] 3.1 First CI size recorded in F-02 `change.md` Notes — a6897fc
+- [x] 3.2 S-05 `change.md` notes F-02 artifact available — 7ba759b
+- [x] 3.3 Team reviews size vs PRD ≤ 80 MB target — a6897fc
