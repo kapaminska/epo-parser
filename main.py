@@ -9,6 +9,17 @@ from pathlib import Path
 _MISSING_FILE_MESSAGE = "Nie znaleziono pliku wejściowego."
 
 
+def _configure_stdio_utf8() -> None:
+    """Avoid Windows console UnicodeEncodeError when printing Polish CLI text."""
+    for stream in (sys.stdout, sys.stderr):
+        reconfigure = getattr(stream, "reconfigure", None)
+        if reconfigure is not None:
+            try:
+                reconfigure(encoding="utf-8")
+            except (OSError, ValueError):
+                pass
+
+
 def resolve_summary_directory(paths: list[Path]) -> Path:
     """Return the directory for ``epo-konwersja.txt`` for explicit CLI paths.
 
@@ -48,6 +59,7 @@ def main(argv: list[str] | None = None) -> int:
     With no arguments, discovers ``*.xml`` in the current directory (flat scan).
     With one or more paths, converts each file in a single batch.
     """
+    _configure_stdio_utf8()
     parser = argparse.ArgumentParser(
         description="Konwertuj pliki XML EPO (e-Doręczenia PP) na PDF.",
     )

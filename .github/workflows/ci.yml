@@ -30,14 +30,15 @@ jobs:
 
       - name: Smoke test --help
         shell: pwsh
+        env:
+          PYTHONIOENCODING: utf-8
         run: |
           & .\dist\epo-parser.exe --help *> help.txt
-          if ($LASTEXITCODE -ne 0) {
-            Get-Content help.txt
-            exit $LASTEXITCODE
-          }
-          $help = Get-Content help.txt -Raw
-          if ($help -notmatch 'Konwertuj pliki XML EPO') {
+          Write-Host "--- help.txt ---"
+          Get-Content help.txt
+          Write-Host "--- exit code: $LASTEXITCODE ---"
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          if (-not (Select-String -Path help.txt -Pattern 'Konwertuj pliki XML EPO' -Quiet)) {
             Write-Error 'help output missing expected text'
           }
 
