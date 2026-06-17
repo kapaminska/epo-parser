@@ -49,7 +49,7 @@ XML (format B) ──► parsers/ ──┘                              └─�
 | ID | Change ID | Outcome (user can …) | Prerequisites | PRD refs | Status |
 |---|---|---|---|---|---|
 | F-01 | epo-fixture-corpus | (foundation) reprezentatywne próbki XML EPO i ścieżka weryfikacji ekstrakcji modelu kanonicznego | — | Business Logic | ready |
-| F-02 | pyinstaller-windows-build | (foundation) szkielet CI/build PyInstaller pod przenośny `.exe` Windows | — | NFR (Windows, portable) | ready |
+| F-02 | pyinstaller-windows-build | (foundation) szkielet CI/build PyInstaller pod przenośny `.exe` Windows | — | NFR (Windows, portable) | done |
 | S-01 | single-xml-to-pdf-and-txt | convert one XML file to PDF with warnings, non-destructive PDF/txt naming, and a text summary file | F-01 | US-01, FR-003, FR-004 | blocked |
 | S-02 | directory-batch-run | run exe in a folder to process all XML (batch) with Open-with CLI fallback | S-01 | US-01, FR-001, FR-002 | proposed |
 | S-03 | pdf-legal-footer | see a legal visualization footer in the PDF stating XML remains binding | S-01 | FR-005 | proposed |
@@ -105,7 +105,7 @@ Stan kodu na `2026-06-17`. Brak implementacji — tylko dokumentacja foundation 
 - **Blockers:** —
 - **Unknowns:** —
 - **Risk:** Pierwszy build ujawnia realny rozmiar `.exe`; wynik zapisuj w PRD Open Question #1.
-- **Status:** ready
+- **Status:** done
 
 ## Slices
 
@@ -214,4 +214,4 @@ Stan kodu na `2026-06-17`. Brak implementacji — tylko dokumentacja foundation 
 
 ## Done
 
-(Empty. `/10x-archive` appends entries when a matching change archives.)
+- **F-02: (foundation) szkielet CI na `windows-latest` produkuje one-file `.exe` PyInstaller bez ręcznej konfiguracji od zera.** — Archived 2026-06-17 → `context/archive/2026-06-17-pyinstaller-windows-build/`. Lesson: —.
