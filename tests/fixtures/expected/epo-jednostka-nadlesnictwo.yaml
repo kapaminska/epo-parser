@@ -1,0 +1,40 @@
+id: epo-jednostka-nadlesnictwo
+schema_variant: karta_epo_v1
+expected_warnings: []
+document:
+  creation_date: "2026-05-18T09:12:44"
+  shipments:
+    - tracking_number: "PUH7443447077111"
+      dispatch_date: "2026-05-10T07:45:00"
+      reference: "LP/W/2026/0187"
+      kind: "decyzja administracyjna"
+      recipient:
+        name: "PIOTR LEŚNY"
+        postal_code: "05-070"
+        city: "SULEJÓWEK"
+        street: "LEŚNA"
+        house_number: "3A"
+        apartment: "2"
+      delivery_event:
+        status_code: 6
+        non_delivery_code: 2
+        system_timestamp: "2026-05-18T09:10:00"
+        awizo_at_parcel_location: 1
+        awizo_at_notice_location: 0
+        awizo_date_1: "2026-05-14T14:30:00"
+        awizo_date_2: "2026-05-17T09:00:00"
+        recipient_signature: null
+      operator:
+        first_name: "KAROL"
+        last_name: "DĄBROWSKI"
+        post_office_name: "Placówka Pocztowa Sulejówek"
+        post_office_address: "05-070  Sulejówek  Warszawska  15"
+      postal_unit:
+        name: "Nadleśnictwo Sulejówek"
+        department: "Kancelaria"
+        city: "Sulejówek"
+        postal_code: "05-070"
+        street: "Leśna"
+        house_number: "1"
+        apartment: null
+      has_outer_signature: true

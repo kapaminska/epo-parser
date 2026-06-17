@@ -318,24 +318,24 @@ Not applicable — greenfield foundation slice. Existing six XML fixtures are ke
 
 #### Automated
 
-- [x] 1.1 Package imports cleanly: `python -c "from domain.model import EpoDocument"`
-- [x] 1.2 `pip install -e ".[dev]"` succeeds with `pyyaml` dev dep
+- [x] 1.1 Package imports cleanly: `python -c "from domain.model import EpoDocument"` — cfb7294
+- [x] 1.2 `pip install -e ".[dev]"` succeeds with `pyyaml` dev dep — cfb7294
 
 #### Manual
 
-- [x] 1.3 Dataclass fields align with golden YAML shape (spot-check after Phase 2, or validate types cover planned golden keys)
+- [x] 1.3 Dataclass fields align with golden YAML shape (spot-check after Phase 2, or validate types cover planned golden keys) — cfb7294
 
 ### Phase 2: Fixture Manifest & Golden YAML
 
 #### Automated
 
-- [ ] 2.1 All 6 golden YAML files exist and parse without error
-- [ ] 2.2 `manifest.yaml` entry count equals XML fixture count; all paths resolve
+- [x] 2.1 All 6 golden YAML files exist and parse without error
+- [x] 2.2 `manifest.yaml` entry count equals XML fixture count; all paths resolve
 
 #### Manual
 
-- [ ] 2.3 README scenarios match XML content; Variant B TBD documented
-- [ ] 2.4 Minimal fixture golden includes non-empty `expected_warnings`
+- [x] 2.3 README scenarios match XML content; Variant B TBD documented
+- [x] 2.4 Minimal fixture golden includes non-empty `expected_warnings`
 
 ### Phase 3: Structural Verification Harness
 

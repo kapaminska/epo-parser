@@ -1,0 +1,33 @@
+id: epo-odebrana-osobiscie
+schema_variant: karta_epo_v1
+expected_warnings: []
+document:
+  creation_date: "2026-04-01T16:05:33"
+  shipments:
+    - tracking_number: "PUH7443447077999"
+      dispatch_date: "2026-03-20T08:00:00"
+      reference: "LP/W/2026/0103"
+      kind: "pismo urzędowe"
+      recipient:
+        name: "JAN KOWALSKI"
+        postal_code: "05-500"
+        city: "PIASECZNO"
+        street: "LIPOWA"
+        house_number: "7"
+        apartment: null
+      delivery_event:
+        status_code: 1
+        non_delivery_code: 0
+        system_timestamp: "2026-04-01T16:04:12"
+        awizo_at_parcel_location: 0
+        awizo_at_notice_location: 0
+        awizo_date_1: null
+        awizo_date_2: null
+        recipient_signature: "podpis-odbiorcy-fixture"
+      operator:
+        first_name: "MARIA"
+        last_name: "ZIELIŃSKA"
+        post_office_name: "Placówka Pocztowa Piaseczno"
+        post_office_address: "05-500  Piaseczno  Puławska  22"
+      postal_unit: null
+      has_outer_signature: true
