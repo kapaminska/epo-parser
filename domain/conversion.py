@@ -20,3 +20,4 @@ class ConversionResult:
     status: ConversionStatus
     warnings: list[ParseWarning] = field(default_factory=list)
     error_message: str | None = None
+    tracking_number: str | None = None

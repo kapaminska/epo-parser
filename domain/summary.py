@@ -31,6 +31,9 @@ def format_summary(results: list[ConversionResult]) -> str:
         else:
             lines.append("PDF: brak")
 
+        if result.tracking_number:
+            lines.append(f"Numer przesyłki: {result.tracking_number}")
+
         if result.error_message:
             lines.append(f"Błąd: {result.error_message}")
 

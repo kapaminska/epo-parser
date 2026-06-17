@@ -399,21 +399,21 @@ Greenfield w warstwach aplikacji; F-01 bez zmian strukturalnych. Po S-01 zaktual
 
 #### Automated
 
-- [x] 3.1 `pytest tests/test_pdf_renderer.py -v` — all green
-- [x] 3.2 `pip install -e ".[dev]"` z `pypdf`
+- [x] 3.1 `pytest tests/test_pdf_renderer.py -v` — all green — 989612d
+- [x] 3.2 `pip install -e ".[dev]"` z `pypdf` — 989612d
 
 #### Manual
 
-- [x] 3.3 Wizualny przegląd PDF z `epo-jednostka-nadlesnictwo.xml`
+- [x] 3.3 Wizualny przegląd PDF z `epo-jednostka-nadlesnictwo.xml` — 989612d
 
 ### Phase 4: Orkiestracja CLI i integracja end-to-end
 
 #### Automated
 
-- [ ] 4.1 `pytest -v` — full suite green
-- [ ] 4.2 `python main.py tests/fixtures/epo-odebrana-osobiscie.xml` — exit 0 w temp dir
+- [x] 4.1 `pytest -v` — full suite green
+- [x] 4.2 `python main.py tests/fixtures/epo-odebrana-osobiscie.xml` — exit 0 w temp dir
 
 #### Manual
 
-- [ ] 4.3 Fixture EZD ze spacjami w nazwie — poprawne wyjścia
-- [ ] 4.4 Nie-XML → brak PDF, błąd w txt, exit 1
+- [x] 4.3 Fixture EZD ze spacjami w nazwie — poprawne wyjścia
+- [x] 4.4 Nie-XML → brak PDF, błąd w txt, exit 1

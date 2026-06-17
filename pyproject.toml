@@ -13,6 +13,9 @@ dependencies = [
     "lxml>=6.1.1",
 ]
 
+[project.scripts]
+epo-parser = "main:main"
+
 [project.optional-dependencies]
 dev = [
     "pip-audit>=2.10.1",
@@ -34,3 +37,4 @@ packages = ["domain", "parsers", "pdf"]
 
 [tool.hatch.build.targets.wheel.force-include]
 "pdf/assets/DejaVuSans.ttf" = "pdf/assets/DejaVuSans.ttf"
+"main.py" = "main.py"
