@@ -254,19 +254,19 @@ No data migration. Developers on macOS continue using `python main.py` / `pytest
 
 #### Automated
 
-- [x] 1.1 `pip install -e ".[dev]"` succeeds with `pyinstaller` importable
-- [x] 1.2 `pytest -v` still passes (no runtime behavior change)
+- [x] 1.1 `pip install -e ".[dev]"` succeeds with `pyinstaller` importable — 030ab6a
+- [x] 1.2 `pytest -v` still passes (no runtime behavior change) — 030ab6a
 
 #### Manual
 
-- [x] 1.3 Spec file reviewed: font in `datas`, `main.py` entry, onefile console mode
+- [x] 1.3 Spec file reviewed: font in `datas`, `main.py` entry, onefile console mode — 030ab6a
 
 ### Phase 2: GitHub Actions CI Workflow
 
 #### Automated
 
-- [ ] 2.1 Workflow YAML is valid (paths match repo layout)
-- [ ] 2.2 `pytest -v` passes locally before first push
+- [x] 2.1 Workflow YAML is valid (paths match repo layout)
+- [x] 2.2 `pytest -v` passes locally before first push
 
 #### Manual
 
