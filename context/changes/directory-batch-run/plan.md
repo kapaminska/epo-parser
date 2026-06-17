@@ -310,10 +310,10 @@ Brak migracji danych. Użytkownicy S-01 CLI (`python main.py file.xml`) bez zmia
 
 #### Automated
 
-- [x] 3.1 `pytest -v` — full suite green
-- [x] 3.2 `pytest tests/test_integration_batch.py -v`
+- [x] 3.1 `pytest -v` — full suite green — f7e0ee2
+- [x] 3.2 `pytest tests/test_integration_batch.py -v` — f7e0ee2
 
 #### Manual
 
-- [x] 3.3 Batch 6 fixture'ów — przegląd txt
-- [x] 3.4 Windows LP: dwuklik + Open-with (przed zamknięciem slice'a) — odłożone do S-05 (brak .exe)
+- [x] 3.3 Batch 6 fixture'ów — przegląd txt — f7e0ee2
+- [x] 3.4 Windows LP: dwuklik + Open-with (przed zamknięciem slice'a) — odłożone do S-05 (brak .exe) — f7e0ee2

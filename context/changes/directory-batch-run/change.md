@@ -1,7 +1,7 @@
 ---
 change_id: directory-batch-run
 title: Directory batch run
-status: implementing
+status: implemented
 created: 2026-06-17
 updated: 2026-06-17
 archived_at: null
@@ -9,4 +9,4 @@ archived_at: null
 
 ## Notes
 
-<!-- Free-form notes for this change: links, ad-hoc context, decisions that don't belong in research/frame/plan. -->
+Manual 3.4 (dwuklik `.exe` na Windows LP) odłożone do **S-05** — wymaga F-02 + build PyInstaller; w S-02 weryfikowano wyłącznie `python main.py` (w tym batch 6 fixture'ów, exit 0).
