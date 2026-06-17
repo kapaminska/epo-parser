@@ -49,6 +49,7 @@ def test_main_help() -> None:
         [sys.executable, str(MAIN_PY), "--help"],
         capture_output=True,
         text=True,
+        encoding="utf-8",
         check=False,
     )
 

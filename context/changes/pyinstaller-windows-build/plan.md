@@ -265,8 +265,8 @@ No data migration. Developers on macOS continue using `python main.py` / `pytest
 
 #### Automated
 
-- [x] 2.1 Workflow YAML is valid (paths match repo layout)
-- [x] 2.2 `pytest -v` passes locally before first push
+- [x] 2.1 Workflow YAML is valid (paths match repo layout) — 214248c
+- [x] 2.2 `pytest -v` passes locally before first push — 214248c
 
 #### Manual
 

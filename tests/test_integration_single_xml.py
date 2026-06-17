@@ -21,6 +21,7 @@ def _run_main(xml_path: Path, *, cwd: Path) -> subprocess.CompletedProcess[str]:
         cwd=cwd,
         capture_output=True,
         text=True,
+        encoding="utf-8",
         check=False,
     )
 
