@@ -1,4 +1,4 @@
-"""EPO Parser CLI — convert a single XML file to PDF and write a summary txt."""
+"""EPO Parser CLI — convert XML files to PDF and write a batch summary txt."""
 
 from __future__ import annotations
 
@@ -7,37 +7,73 @@ import sys
 from pathlib import Path
 
 from domain.conversion import ConversionResult
-from domain.pipeline import convert_xml_file
+from domain.discovery import discover_xml_files
+from domain.pipeline import convert_xml_file, convert_xml_files
 from domain.summary import write_summary
+
+_MISSING_FILE_MESSAGE = "Nie znaleziono pliku wejściowego."
+
+
+def resolve_summary_directory(paths: list[Path]) -> Path:
+    """Return the directory for ``epo-konwersja.txt`` for explicit CLI paths.
+
+    When all paths share the same parent, use that parent; otherwise use cwd.
+    """
+    if not paths:
+        return Path.cwd()
+    parents = {path.resolve().parent for path in paths}
+    if len(parents) == 1:
+        return next(iter(parents))
+    return Path.cwd()
+
+
+def _process_explicit_paths(paths: list[Path]) -> list[ConversionResult]:
+    results: list[ConversionResult] = []
+    for path in paths:
+        if not path.exists():
+            results.append(
+                ConversionResult(
+                    source=path,
+                    pdf_path=None,
+                    status="failed",
+                    error_message=_MISSING_FILE_MESSAGE,
+                )
+            )
+        else:
+            results.append(convert_xml_file(path))
+    return results
 
 
 def main(argv: list[str] | None = None) -> int:
-    """Convert one XML path to PDF and write ``epo-konwersja.txt`` beside it."""
+    """Convert XML files to PDF and write ``epo-konwersja.txt``.
+
+    With no arguments, discovers ``*.xml`` in the current directory (flat scan).
+    With one or more paths, converts each file in a single batch.
+    """
     parser = argparse.ArgumentParser(
-        description="Konwertuj plik XML EPO (e-Doręczenia PP) na PDF.",
+        description="Konwertuj pliki XML EPO (e-Doręczenia PP) na PDF.",
     )
     parser.add_argument(
-        "xml_path",
+        "paths",
+        nargs="*",
         type=Path,
-        help="Ścieżka do pliku XML EPO",
+        help="Ścieżki do plików XML EPO (puste = wszystkie *.xml w bieżącym katalogu)",
     )
     args = parser.parse_args(argv)
-    xml_path: Path = args.xml_path
 
-    if not xml_path.exists():
-        summary_dir = xml_path.parent if xml_path.parent.exists() else Path.cwd()
-        result = ConversionResult(
-            source=xml_path,
-            pdf_path=None,
-            status="failed",
-            error_message="Nie znaleziono pliku wejściowego.",
-        )
-        write_summary(summary_dir, [result])
+    if not args.paths:
+        summary_dir = Path.cwd()
+        xml_paths = discover_xml_files(summary_dir)
+        results = convert_xml_files(xml_paths)
+    else:
+        summary_dir = resolve_summary_directory(args.paths)
+        results = _process_explicit_paths(args.paths)
+
+    write_summary(summary_dir, results)
+
+    if not results or any(result.status == "failed" for result in results):
         return 1
-
-    result = convert_xml_file(xml_path)
-    write_summary(result.source.parent, [result])
-    return 0 if result.status == "success" else 1
+    return 0
 
 
 if __name__ == "__main__":

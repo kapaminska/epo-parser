@@ -287,24 +287,24 @@ Brak migracji danych. Użytkownicy S-01 CLI (`python main.py file.xml`) bez zmia
 
 #### Automated
 
-- [x] 1.1 `pytest tests/test_discovery.py tests/test_pipeline_batch.py -v` — all green
-- [x] 1.2 `pytest tests/test_summary.py -v` — test pustej listy
+- [x] 1.1 `pytest tests/test_discovery.py tests/test_pipeline_batch.py -v` — all green — 8f30a1e
+- [x] 1.2 `pytest tests/test_summary.py -v` — test pustej listy — 8f30a1e
 
 #### Manual
 
-- [x] 1.3 (brak — przejście do fazy 2 po automated green)
+- [x] 1.3 (brak — przejście do fazy 2 po automated green) — 8f30a1e
 
 ### Phase 2: Orkiestracja CLI (`main.py`)
 
 #### Automated
 
-- [ ] 2.1 `pytest tests/test_integration_single_xml.py -v` — brak regresji
-- [ ] 2.2 `--help` i import `main` działają
+- [x] 2.1 `pytest tests/test_integration_single_xml.py -v` — brak regresji
+- [x] 2.2 `--help` i import `main` działają
 
 #### Manual
 
-- [ ] 2.3 Pusty katalog → txt + exit 1
-- [ ] 2.4 Pojedynczy plik CLI — zachowanie S-01
+- [x] 2.3 Pusty katalog → txt + exit 1
+- [x] 2.4 Pojedynczy plik CLI — zachowanie S-01
 
 ### Phase 3: Testy integracyjne batch i weryfikacja wydajności
 
