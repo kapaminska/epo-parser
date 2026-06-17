@@ -389,22 +389,22 @@ Greenfield w warstwach aplikacji; F-01 bez zmian strukturalnych. Po S-01 zaktual
 
 #### Automated
 
-- [x] 2.1 `pytest tests/test_naming.py tests/test_summary.py -v` — all green
+- [x] 2.1 `pytest tests/test_naming.py tests/test_summary.py -v` — all green — e6a8656
 
 #### Manual
 
-- [x] 2.2 Drugi run w temp dir → ` (2).pdf` i `epo-konwersja (2).txt`
+- [x] 2.2 Drugi run w temp dir → ` (2).pdf` i `epo-konwersja (2).txt` — e6a8656
 
 ### Phase 3: Renderer PDF
 
 #### Automated
 
-- [ ] 3.1 `pytest tests/test_pdf_renderer.py -v` — all green
-- [ ] 3.2 `pip install -e ".[dev]"` z `pypdf`
+- [x] 3.1 `pytest tests/test_pdf_renderer.py -v` — all green
+- [x] 3.2 `pip install -e ".[dev]"` z `pypdf`
 
 #### Manual
 
-- [ ] 3.3 Wizualny przegląd PDF z `epo-jednostka-nadlesnictwo.xml`
+- [x] 3.3 Wizualny przegląd PDF z `epo-jednostka-nadlesnictwo.xml`
 
 ### Phase 4: Orkiestracja CLI i integracja end-to-end
 

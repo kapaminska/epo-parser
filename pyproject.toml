@@ -16,6 +16,7 @@ dependencies = [
 [project.optional-dependencies]
 dev = [
     "pip-audit>=2.10.1",
+    "pypdf>=5.0.0",
     "pytest>=9.1.0",
     "pyyaml>=6.0.3",
 ]
@@ -23,9 +24,13 @@ dev = [
 [dependency-groups]
 dev = [
     "pip-audit>=2.10.1",
+    "pypdf>=5.0.0",
     "pytest>=9.1.0",
     "pyyaml>=6.0.3",
 ]
 
 [tool.hatch.build.targets.wheel]
-packages = ["domain", "parsers"]
+packages = ["domain", "parsers", "pdf"]
+
+[tool.hatch.build.targets.wheel.force-include]
+"pdf/assets/DejaVuSans.ttf" = "pdf/assets/DejaVuSans.ttf"
