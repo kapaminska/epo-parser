@@ -329,22 +329,22 @@ Not applicable — greenfield foundation slice. Existing six XML fixtures are ke
 
 #### Automated
 
-- [x] 2.1 All 6 golden YAML files exist and parse without error
-- [x] 2.2 `manifest.yaml` entry count equals XML fixture count; all paths resolve
+- [x] 2.1 All 6 golden YAML files exist and parse without error — 59ca793
+- [x] 2.2 `manifest.yaml` entry count equals XML fixture count; all paths resolve — 59ca793
 
 #### Manual
 
-- [x] 2.3 README scenarios match XML content; Variant B TBD documented
-- [x] 2.4 Minimal fixture golden includes non-empty `expected_warnings`
+- [x] 2.3 README scenarios match XML content; Variant B TBD documented — 59ca793
+- [x] 2.4 Minimal fixture golden includes non-empty `expected_warnings` — 59ca793
 
 ### Phase 3: Structural Verification Harness
 
 #### Automated
 
-- [ ] 3.1 `pytest -v` — all non-skipped tests pass
-- [ ] 3.2 `pytest tests/test_fixture_corpus.py -v` — structural tests green
-- [ ] 3.3 Skipped parser golden tests visible in pytest output (6 cases)
+- [x] 3.1 `pytest -v` — all non-skipped tests pass
+- [x] 3.2 `pytest tests/test_fixture_corpus.py -v` — structural tests green
+- [x] 3.3 Skipped parser golden tests visible in pytest output (6 cases)
 
 #### Manual
 
-- [ ] 3.4 Structural test run succeeds on macOS dev venv
+- [x] 3.4 Structural test run succeeds on macOS dev venv
