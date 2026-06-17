@@ -38,3 +38,8 @@ packages = ["domain", "parsers", "pdf"]
 [tool.hatch.build.targets.wheel.force-include]
 "pdf/assets/DejaVuSans.ttf" = "pdf/assets/DejaVuSans.ttf"
 "main.py" = "main.py"
+
+[tool.pytest.ini_options]
+markers = [
+    "slow: dev-only performance smoke tests (run with pytest -m slow)",
+]

@@ -298,22 +298,22 @@ Brak migracji danych. Użytkownicy S-01 CLI (`python main.py file.xml`) bez zmia
 
 #### Automated
 
-- [x] 2.1 `pytest tests/test_integration_single_xml.py -v` — brak regresji
-- [x] 2.2 `--help` i import `main` działają
+- [x] 2.1 `pytest tests/test_integration_single_xml.py -v` — brak regresji — ec2b76b
+- [x] 2.2 `--help` i import `main` działają — ec2b76b
 
 #### Manual
 
-- [x] 2.3 Pusty katalog → txt + exit 1
-- [x] 2.4 Pojedynczy plik CLI — zachowanie S-01
+- [x] 2.3 Pusty katalog → txt + exit 1 — ec2b76b
+- [x] 2.4 Pojedynczy plik CLI — zachowanie S-01 — ec2b76b
 
 ### Phase 3: Testy integracyjne batch i weryfikacja wydajności
 
 #### Automated
 
-- [ ] 3.1 `pytest -v` — full suite green
-- [ ] 3.2 `pytest tests/test_integration_batch.py -v`
+- [x] 3.1 `pytest -v` — full suite green
+- [x] 3.2 `pytest tests/test_integration_batch.py -v`
 
 #### Manual
 
-- [ ] 3.3 Batch 6 fixture'ów — przegląd txt
-- [ ] 3.4 Windows LP: dwuklik + Open-with (przed zamknięciem slice'a)
+- [x] 3.3 Batch 6 fixture'ów — przegląd txt
+- [x] 3.4 Windows LP: dwuklik + Open-with (przed zamknięciem slice'a) — odłożone do S-05 (brak .exe)
