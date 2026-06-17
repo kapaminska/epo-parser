@@ -17,10 +17,12 @@ from domain.model import (
 )
 
 FONT_PATH = Path(__file__).resolve().parent / "assets" / "DejaVuSans.ttf"
+# FR-005: inline legal disclaimer (not a per-page footer hook).
 LEGAL_FOOTER = (
     "Niniejszy plik PDF stanowi wyłącznie wizualizację. "
     "Wiążącym dokumentem pozostaje oryginalny podpisany plik XML."
 )
+FOOTER_BLOCK_HEIGHT_MM = 15
 EMPTY_VALUE = "—"
 
 
@@ -150,6 +152,9 @@ def _render_warnings(pdf: _EpoPdf, warnings: list[ParseWarning]) -> None:
 
 
 def _render_legal_footer(pdf: _EpoPdf) -> None:
+    """Render the FR-005 disclaimer inline after uwagi / ostrzeżenia."""
+    if pdf.get_y() + FOOTER_BLOCK_HEIGHT_MM > pdf.page_break_trigger:
+        pdf.add_page()
     pdf.ln(6)
     pdf.set_font("DejaVu", size=9)
     pdf.multi_cell(w=0, h=4, text=LEGAL_FOOTER)

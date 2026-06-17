@@ -9,7 +9,7 @@ import yaml
 from pypdf import PdfReader
 
 from conftest import FIXTURES_DIR, load_manifest
-from pdf.renderer import render_epo_pdf
+from pdf.renderer import LEGAL_FOOTER, render_epo_pdf
 
 PDF_FIXTURE_IDS = [
     "epo-odebrana-osobiscie",
@@ -35,6 +35,10 @@ def _extract_pdf_text(pdf_path: Path) -> str:
     return "\n".join(page.extract_text() or "" for page in reader.pages)
 
 
+def _normalize_pdf_text(text: str) -> str:
+    return " ".join(text.split())
+
+
 @pytest.mark.parametrize("fixture_id", PDF_FIXTURE_IDS)
 def test_render_epo_pdf_contains_core_sections(
     fixture_id: str,
@@ -52,8 +56,31 @@ def test_render_epo_pdf_contains_core_sections(
     assert "Elektroniczne Potwierdzenie Odbioru" in text
     for heading in SECTION_HEADINGS:
         assert heading in text
-    assert "Niniejszy plik PDF stanowi wyłącznie wizualizację" in text
-    assert "Wiążącym dokumentem pozostaje oryginalny podpisany plik" in text
+
+
+@pytest.mark.parametrize(
+    "fixture_id",
+    ["epo-odebrana-osobiscie", "epo-minimal-puste-pola"],
+)
+def test_render_epo_pdf_legal_footer_text_and_order(
+    fixture_id: str,
+    tmp_path: Path,
+) -> None:
+    parse_pp_epo = pytest.importorskip("parsers.pp_edoreczenia").parse_pp_epo
+    entry = _manifest_by_id()[fixture_id]
+    document = parse_pp_epo(FIXTURES_DIR / entry["xml"])
+    output_path = tmp_path / f"{fixture_id}.pdf"
+
+    render_epo_pdf(document, output_path)
+
+    text = _extract_pdf_text(output_path)
+    normalized = _normalize_pdf_text(text)
+    assert _normalize_pdf_text(LEGAL_FOOTER) in normalized
+    uwagi_index = normalized.index("Uwagi / ostrzeżenia")
+    disclaimer_index = normalized.index(
+        "Niniejszy plik PDF stanowi wyłącznie wizualizację"
+    )
+    assert uwagi_index < disclaimer_index
 
 
 def test_render_epo_pdf_contains_tracking_number_and_polish_diacritics(
