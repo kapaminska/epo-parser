@@ -377,23 +377,23 @@ Greenfield w warstwach aplikacji; F-01 bez zmian strukturalnych. Po S-01 zaktual
 
 #### Automated
 
-- [x] 1.1 `pytest tests/test_pp_epo_parser.py -v` — 6/6 green
-- [x] 1.2 `pytest tests/test_fixture_corpus.py -v` — bez regresji
-- [x] 1.3 Import `parse_pp_epo` działa
+- [x] 1.1 `pytest tests/test_pp_epo_parser.py -v` — 6/6 green — bdf14a9
+- [x] 1.2 `pytest tests/test_fixture_corpus.py -v` — bez regresji — bdf14a9
+- [x] 1.3 Import `parse_pp_epo` działa — bdf14a9
 
 #### Manual
 
-- [x] 1.4 Pola Nadleśnictwa zgodne z golden dla `epo-jednostka-nadlesnictwo`
+- [x] 1.4 Pola Nadleśnictwa zgodne z golden dla `epo-jednostka-nadlesnictwo` — bdf14a9
 
 ### Phase 2: Reguły nazw wyjściowych i podsumowanie txt
 
 #### Automated
 
-- [ ] 2.1 `pytest tests/test_naming.py tests/test_summary.py -v` — all green
+- [x] 2.1 `pytest tests/test_naming.py tests/test_summary.py -v` — all green
 
 #### Manual
 
-- [ ] 2.2 Drugi run w temp dir → ` (2).pdf` i `epo-konwersja (2).txt`
+- [x] 2.2 Drugi run w temp dir → ` (2).pdf` i `epo-konwersja (2).txt`
 
 ### Phase 3: Renderer PDF
 
