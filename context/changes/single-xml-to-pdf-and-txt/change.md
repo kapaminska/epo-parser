@@ -1,7 +1,7 @@
 ---
 change_id: single-xml-to-pdf-and-txt
 title: Single xml to pdf and txt
-status: implementing
+status: implemented
 created: 2026-06-17
 updated: 2026-06-17
 archived_at: null

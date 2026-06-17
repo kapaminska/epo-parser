@@ -410,10 +410,10 @@ Greenfield w warstwach aplikacji; F-01 bez zmian strukturalnych. Po S-01 zaktual
 
 #### Automated
 
-- [x] 4.1 `pytest -v` — full suite green
-- [x] 4.2 `python main.py tests/fixtures/epo-odebrana-osobiscie.xml` — exit 0 w temp dir
+- [x] 4.1 `pytest -v` — full suite green — 71c91ff
+- [x] 4.2 `python main.py tests/fixtures/epo-odebrana-osobiscie.xml` — exit 0 w temp dir — 71c91ff
 
 #### Manual
 
-- [x] 4.3 Fixture EZD ze spacjami w nazwie — poprawne wyjścia
-- [x] 4.4 Nie-XML → brak PDF, błąd w txt, exit 1
+- [x] 4.3 Fixture EZD ze spacjami w nazwie — poprawne wyjścia — 71c91ff
+- [x] 4.4 Nie-XML → brak PDF, błąd w txt, exit 1 — 71c91ff
