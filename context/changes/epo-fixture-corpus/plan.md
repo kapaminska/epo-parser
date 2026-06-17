@@ -318,12 +318,12 @@ Not applicable — greenfield foundation slice. Existing six XML fixtures are ke
 
 #### Automated
 
-- [ ] 1.1 Package imports cleanly: `python -c "from domain.model import EpoDocument"`
-- [ ] 1.2 `pip install -e ".[dev]"` succeeds with `pyyaml` dev dep
+- [x] 1.1 Package imports cleanly: `python -c "from domain.model import EpoDocument"`
+- [x] 1.2 `pip install -e ".[dev]"` succeeds with `pyyaml` dev dep
 
 #### Manual
 
-- [ ] 1.3 Dataclass fields align with golden YAML shape (spot-check after Phase 2, or validate types cover planned golden keys)
+- [x] 1.3 Dataclass fields align with golden YAML shape (spot-check after Phase 2, or validate types cover planned golden keys)
 
 ### Phase 2: Fixture Manifest & Golden YAML
 
