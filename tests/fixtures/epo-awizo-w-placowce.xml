@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mstns:TabletKartaEpo xsi:schemaLocation="http://msepo.gov.pl/epo/XSD/KartaEPO.xsd KartaEPO.xsd" xmlns:mstns="http://msepo.gov.pl/epo/XSD/KartaEPO.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <mstns:CreationDate>2026-02-20T11:33:17</mstns:CreationDate>
+  <mstns:IDKartaEPO/>
+  <mstns:TabletPrzesylki>
+    <mstns:TabletPrzesylkaPodpis>
+      <mstns:TabletPrzesylka>
+        <mstns:IDPrzesylka>{F6A7B8C9-D0E1-2345-F012-678901234567}</mstns:IDPrzesylka>
+        <mstns:NumerNadania>PUH7443447077222</mstns:NumerNadania>
+        <mstns:DataNadania>2026-01-28T13:20:00</mstns:DataNadania>
+        <mstns:Adresat>BARBARA WÓJCIK</mstns:Adresat>
+        <mstns:KodPocztowy>05-090</mstns:KodPocztowy>
+        <mstns:Miejscowosc>MARKI</mstns:Miejscowosc>
+        <mstns:Ulica>POCZTOWA</mstns:Ulica>
+        <mstns:Dom>5</mstns:Dom>
+        <mstns:Lokal/>
+        <mstns:Sygnatura>LP/W/2026/0061</mstns:Sygnatura>
+        <mstns:Rodzaj>wezwanie</mstns:Rodzaj>
+        <mstns:StatusPrzesylki>4</mstns:StatusPrzesylki>
+        <mstns:SystemowaDataOznaczenia>2026-02-20T11:30:00</mstns:SystemowaDataOznaczenia>
+        <mstns:ImieINazwiskoOdbiorcy/>
+        <mstns:Podpis/>
+        <mstns:BrakDoreczenia>1</mstns:BrakDoreczenia>
+        <mstns:AwizoMiejscePrzesylki>1</mstns:AwizoMiejscePrzesylki>
+        <mstns:AwizoMiejsceZawiadomienia>1</mstns:AwizoMiejsceZawiadomienia>
+        <mstns:TabletJednostkaMS>
+          <mstns:IDJednostkaMS/>
+          <mstns:NazwaJednostki/>
+          <mstns:Wydzial/>
+          <mstns:Miasto/>
+          <mstns:KodPocztowy/>
+          <mstns:Ulica/>
+          <mstns:Dom/>
+          <mstns:Lokal/>
+        </mstns:TabletJednostkaMS>
+        <DaneBiometryczne>
+          <DataPodpisu>2026-02-20T11:30:00</DataPodpisu>
+          <DataZapisu>2026-02-20T11:30:00</DataZapisu>
+          <IdOperatora>5</IdOperatora>
+          <IdUrzadzenia>5</IdUrzadzenia>
+          <CzasNaciskList>
+            <CzasNacisk><Czas>0</Czas><Nacisk>0</Nacisk><X>0</X><Y>0</Y></CzasNacisk>
+          </CzasNaciskList>
+        </DaneBiometryczne>
+        <mstns:Wydajacy Imie="ALICJA" Nazwisko="MALINOWSKA" Id="T002T" IDPlacowka="990002" NazwaPlacowki="Placówka Pocztowa Marki" AdresPlacowki="05-090  Marki  Pocztowa  10" PNIPlacowki="990002"/>
+        <mstns:DataAwizo1>2026-02-10T08:00:00</mstns:DataAwizo1>
+        <mstns:DataAwizo2>2026-02-17T08:00:00</mstns:DataAwizo2>
+      </mstns:TabletPrzesylka>
+      <mstns:Podpis>MIIBzgYJKoZIhvcNAQcCoIIBvzCCAbsCAQExDzANBglghkgBZQMEAgEFADALBgkqhkiG9w0BBwExggGWMIIBkgIBATBrMFQxEjAQBgoJkiaJk/IsZAEZFgJwcDETMBEGCgmSJomT8ixkARkWA25ldDEpMCcGA1UEAwwgUG9jenRhIFBvbHNrYSBTLkEuIEVudGVycHJpc2UgQ0ECE0gAAFWe6/PstjZhhSsAAAAAVZ4wDQYJYIZIAWUDBAIBBQAwDQYJKoZIhvcNAQEBBQAEggEAFIXTURESIGEXAMPLE004</mstns:Podpis>
+    </mstns:TabletPrzesylkaPodpis>
+  </mstns:TabletPrzesylki>
+  <mstns:RejonFirstName>EWA</mstns:RejonFirstName>
+  <mstns:RejonLastName>MALINOWSKA</mstns:RejonLastName>
+  <mstns:TabletPlacowkiAwizacyjne>
+    <mstns:TabletPlacowka>
+      <mstns:IDPlacowka>990002</mstns:IDPlacowka>
+      <mstns:Nazwa>AP Marki Testowa</mstns:Nazwa>
+      <mstns:PNI>990002</mstns:PNI>
+    </mstns:TabletPlacowka>
+  </mstns:TabletPlacowkiAwizacyjne>
+  <mstns:RejonNumber>0</mstns:RejonNumber>
+  <mstns:Number>0</mstns:Number>
+</mstns:TabletKartaEpo>

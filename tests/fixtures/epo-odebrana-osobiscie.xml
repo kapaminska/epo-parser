@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mstns:TabletKartaEpo xsi:schemaLocation="http://msepo.gov.pl/epo/XSD/KartaEPO.xsd KartaEPO.xsd" xmlns:mstns="http://msepo.gov.pl/epo/XSD/KartaEPO.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <mstns:CreationDate>2026-04-01T16:05:33</mstns:CreationDate>
+  <mstns:IDKartaEPO/>
+  <mstns:TabletPrzesylki>
+    <mstns:TabletPrzesylkaPodpis>
+      <mstns:TabletPrzesylka>
+        <mstns:IDPrzesylka>{C3D4E5F6-A7B8-9012-CDEF-345678901234}</mstns:IDPrzesylka>
+        <mstns:NumerNadania>PUH7443447077999</mstns:NumerNadania>
+        <mstns:DataNadania>2026-03-20T08:00:00</mstns:DataNadania>
+        <mstns:Adresat>JAN KOWALSKI</mstns:Adresat>
+        <mstns:KodPocztowy>05-500</mstns:KodPocztowy>
+        <mstns:Miejscowosc>PIASECZNO</mstns:Miejscowosc>
+        <mstns:Ulica>LIPOWA</mstns:Ulica>
+        <mstns:Dom>7</mstns:Dom>
+        <mstns:Lokal/>
+        <mstns:Sygnatura>LP/W/2026/0103</mstns:Sygnatura>
+        <mstns:Rodzaj>pismo urzędowe</mstns:Rodzaj>
+        <mstns:StatusPrzesylki>1</mstns:StatusPrzesylki>
+        <mstns:SystemowaDataOznaczenia>2026-04-01T16:04:12</mstns:SystemowaDataOznaczenia>
+        <mstns:ImieINazwiskoOdbiorcy>JAN KOWALSKI</mstns:ImieINazwiskoOdbiorcy>
+        <mstns:Podpis>podpis-odbiorcy-fixture</mstns:Podpis>
+        <mstns:BrakDoreczenia>0</mstns:BrakDoreczenia>
+        <mstns:AwizoMiejscePrzesylki>0</mstns:AwizoMiejscePrzesylki>
+        <mstns:AwizoMiejsceZawiadomienia>0</mstns:AwizoMiejsceZawiadomienia>
+        <mstns:TabletJednostkaMS>
+          <mstns:IDJednostkaMS/>
+          <mstns:NazwaJednostki/>
+          <mstns:Wydzial/>
+          <mstns:Miasto/>
+          <mstns:KodPocztowy/>
+          <mstns:Ulica/>
+          <mstns:Dom/>
+          <mstns:Lokal/>
+        </mstns:TabletJednostkaMS>
+        <DaneBiometryczne>
+          <DataPodpisu>2026-04-01T16:04:12</DataPodpisu>
+          <DataZapisu>2026-04-01T16:04:12</DataZapisu>
+          <IdOperatora>3</IdOperatora>
+          <IdUrzadzenia>3</IdUrzadzenia>
+          <CzasNaciskList>
+            <CzasNacisk><Czas>120</Czas><Nacisk>45</Nacisk><X>10</X><Y>20</Y></CzasNacisk>
+            <CzasNacisk><Czas>240</Czas><Nacisk>52</Nacisk><X>15</X><Y>25</Y></CzasNacisk>
+          </CzasNaciskList>
+        </DaneBiometryczne>
+        <mstns:Wydajacy Imie="MARIA" Nazwisko="ZIELIŃSKA" Id="C703C" IDPlacowka="985881" NazwaPlacowki="Placówka Pocztowa Piaseczno" AdresPlacowki="05-500  Piaseczno  Puławska  22" PNIPlacowki="985881"/>
+        <mstns:DataAwizo1/>
+        <mstns:DataAwizo2/>
+      </mstns:TabletPrzesylka>
+      <mstns:Podpis>MIIBzgYJKoZIhvcNAQcCoIIBvzCCAbsCAQExDzANBglghkgBZQMEAgEFADALBgkqhkiG9w0BBwExggGWMIIBkgIBATBrMFQxEjAQBgoJkiaJk/IsZAEZFgJwcDETMBEGCgmSJomT8ixkARkWA25ldDEpMCcGA1UEAwwgUG9jenRhIFBvbHNrYSBTLkEuIEVudGVycHJpc2UgQ0ECE0gAAFWe6/PstjZhhSsAAAAAVZ4wDQYJYIZIAWUDBAIBBQAwDQYJKoZIhvcNAQEBBQAEggEAFIXTURESIGEXAMPLE002</mstns:Podpis>
+    </mstns:TabletPrzesylkaPodpis>
+  </mstns:TabletPrzesylki>
+  <mstns:RejonFirstName>MARIA</mstns:RejonFirstName>
+  <mstns:RejonLastName>ZIELIŃSKA</mstns:RejonLastName>
+  <mstns:TabletPlacowkiAwizacyjne>
+    <mstns:TabletPlacowka>
+      <mstns:IDPlacowka>985881</mstns:IDPlacowka>
+      <mstns:Nazwa>AP Piaseczno Puławska</mstns:Nazwa>
+      <mstns:PNI>985881</mstns:PNI>
+    </mstns:TabletPlacowka>
+  </mstns:TabletPlacowkiAwizacyjne>
+  <mstns:RejonNumber>2</mstns:RejonNumber>
+  <mstns:Number>2</mstns:Number>
+</mstns:TabletKartaEpo>

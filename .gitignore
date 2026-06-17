@@ -1,0 +1,107 @@
+# Cursor IDE
+.cursor/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# .NET / C# / Visual Studio
+bin/
+obj/
+out/
+publish/
+artifacts/
+
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.rsuser
+
+.vs/
+.vscode/
+*.swp
+*~
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+# NuGet
+*.nupkg
+*.snupkg
+**/[Pp]ackages/*
+!**/[Pp]ackages/build/
+project.lock.json
+project.fragment.lock.json
+*.nuget.props
+*.nuget.targets
+.nuget/
+.nuget/NuGet.Config
+
+# Test / coverage
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+*.VisualState.xml
+TestResult.xml
+nunit-*.xml
+coverage/
+*.coverage
+*.coveragexml
+*.opencover.xml
+
+# Rider / JetBrains
+.idea/
+*.sln.iml
+
+# User-specific / secrets
+*.env
+*.env.*
+secrets.json
+
+# Temporary files
+*.tmp
+*.temp
+*.cache
+*.log
+
+# Node (legacy scaffold)
+node_modules/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+env/
+dist/
+build/
+*.egg-info/
+.eggs/
+*.spec.bak
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+htmlcov/
+.coverage

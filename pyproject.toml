@@ -1,0 +1,16 @@
+[project]
+name = "epo-parser"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "fpdf2>=2.8.7",
+    "lxml>=6.1.1",
+]
+
+[dependency-groups]
+dev = [
+    "pip-audit>=2.10.1",
+    "pytest>=9.1.0",
+]

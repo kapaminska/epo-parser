@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mstns:TabletKartaEpo xsi:schemaLocation="http://msepo.gov.pl/epo/XSD/KartaEPO.xsd KartaEPO.xsd" xmlns:mstns="http://msepo.gov.pl/epo/XSD/KartaEPO.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <mstns:CreationDate>2026-05-18T09:12:44</mstns:CreationDate>
+  <mstns:IDKartaEPO/>
+  <mstns:TabletPrzesylki>
+    <mstns:TabletPrzesylkaPodpis>
+      <mstns:TabletPrzesylka>
+        <mstns:IDPrzesylka>{E5F6A7B8-C9D0-1234-EF01-567890123456}</mstns:IDPrzesylka>
+        <mstns:NumerNadania>PUH7443447077111</mstns:NumerNadania>
+        <mstns:DataNadania>2026-05-10T07:45:00</mstns:DataNadania>
+        <mstns:Adresat>PIOTR LEŚNY</mstns:Adresat>
+        <mstns:KodPocztowy>05-070</mstns:KodPocztowy>
+        <mstns:Miejscowosc>SULEJÓWEK</mstns:Miejscowosc>
+        <mstns:Ulica>LEŚNA</mstns:Ulica>
+        <mstns:Dom>3A</mstns:Dom>
+        <mstns:Lokal>2</mstns:Lokal>
+        <mstns:Sygnatura>LP/W/2026/0187</mstns:Sygnatura>
+        <mstns:Rodzaj>decyzja administracyjna</mstns:Rodzaj>
+        <mstns:StatusPrzesylki>6</mstns:StatusPrzesylki>
+        <mstns:SystemowaDataOznaczenia>2026-05-18T09:10:00</mstns:SystemowaDataOznaczenia>
+        <mstns:ImieINazwiskoOdbiorcy/>
+        <mstns:Podpis/>
+        <mstns:BrakDoreczenia>2</mstns:BrakDoreczenia>
+        <mstns:AwizoMiejscePrzesylki>1</mstns:AwizoMiejscePrzesylki>
+        <mstns:AwizoMiejsceZawiadomienia>0</mstns:AwizoMiejsceZawiadomienia>
+        <mstns:TabletJednostkaMS>
+          <mstns:IDJednostkaMS>NS-001</mstns:IDJednostkaMS>
+          <mstns:NazwaJednostki>Nadleśnictwo Sulejówek</mstns:NazwaJednostki>
+          <mstns:Wydzial>Kancelaria</mstns:Wydzial>
+          <mstns:Miasto>Sulejówek</mstns:Miasto>
+          <mstns:KodPocztowy>05-070</mstns:KodPocztowy>
+          <mstns:Ulica>Leśna</mstns:Ulica>
+          <mstns:Dom>1</mstns:Dom>
+          <mstns:Lokal/>
+        </mstns:TabletJednostkaMS>
+        <DaneBiometryczne>
+          <DataPodpisu>2026-05-18T09:10:00</DataPodpisu>
+          <DataZapisu>2026-05-18T09:10:00</DataZapisu>
+          <IdOperatora>4</IdOperatora>
+          <IdUrzadzenia>4</IdUrzadzenia>
+          <CzasNaciskList>
+            <CzasNacisk><Czas>0</Czas><Nacisk>0</Nacisk><X>0</X><Y>0</Y></CzasNacisk>
+          </CzasNaciskList>
+        </DaneBiometryczne>
+        <mstns:Wydajacy Imie="KAROL" Nazwisko="DĄBROWSKI" Id="D804D" IDPlacowka="985882" NazwaPlacowki="Placówka Pocztowa Sulejówek" AdresPlacowki="05-070  Sulejówek  Warszawska  15" PNIPlacowki="985882"/>
+        <mstns:DataAwizo1>2026-05-14T14:30:00</mstns:DataAwizo1>
+        <mstns:DataAwizo2>2026-05-17T09:00:00</mstns:DataAwizo2>
+      </mstns:TabletPrzesylka>
+      <mstns:Podpis>MIIBzgYJKoZIhvcNAQcCoIIBvzCCAbsCAQExDzANBglghkgBZQMEAgEFADALBgkqhkiG9w0BBwExggGWMIIBkgIBATBrMFQxEjAQBgoJkiaJk/IsZAEZFgJwcDETMBEGCgmSJomT8ixkARkWA25ldDEpMCcGA1UEAwwgUG9jenRhIFBvbHNrYSBTLkEuIEVudGVycHJpc2UgQ0ECE0gAAFWe6/PstjZhhSsAAAAAVZ4wDQYJYIZIAWUDBAIBBQAwDQYJKoZIhvcNAQEBBQAEggEAFIXTURESIGEXAMPLE003</mstns:Podpis>
+    </mstns:TabletPrzesylkaPodpis>
+  </mstns:TabletPrzesylki>
+  <mstns:RejonFirstName>KAROL</mstns:RejonFirstName>
+  <mstns:RejonLastName>DĄBROWSKI</mstns:RejonLastName>
+  <mstns:TabletPlacowkiAwizacyjne>
+    <mstns:TabletPlacowka>
+      <mstns:IDPlacowka>985882</mstns:IDPlacowka>
+      <mstns:Nazwa>AP Sulejówek Warszawska</mstns:Nazwa>
+      <mstns:PNI>985882</mstns:PNI>
+    </mstns:TabletPlacowka>
+  </mstns:TabletPlacowkiAwizacyjne>
+  <mstns:RejonNumber>3</mstns:RejonNumber>
+  <mstns:Number>3</mstns:Number>
+</mstns:TabletKartaEpo>
