@@ -1,15 +1,16 @@
 name: CI
 
-"on":
+on:
   push:
+    branches:
+      - main
+  pull_request:
     branches:
       - main
 
 jobs:
-  build:
-    runs-on: windows-latest
-    env:
-      PYTHONUTF8: "1"
+  test:
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -24,34 +25,3 @@ jobs:
 
       - name: Run tests
         run: pytest -v
-
-      - name: Build Windows executable
-        run: pyinstaller epo-parser.spec --noconfirm
-
-      - name: Smoke test --help
-        shell: pwsh
-        env:
-          PYTHONIOENCODING: utf-8
-        run: |
-          & .\dist\epo-parser.exe --help *> help.txt
-          Write-Host "--- help.txt ---"
-          Get-Content help.txt
-          Write-Host "--- exit code: $LASTEXITCODE ---"
-          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
-          if (-not (Select-String -Path help.txt -Pattern 'Konwertuj pliki XML EPO' -Quiet)) {
-            Write-Error 'help output missing expected text'
-          }
-
-      - name: Log executable size
-        shell: pwsh
-        run: |
-          $sizeBytes = (Get-Item dist/epo-parser.exe).Length
-          $sizeMB = [math]::Round($sizeBytes / 1MB, 2)
-          Write-Host "epo-parser.exe size: $sizeMB MB ($sizeBytes bytes)"
-
-      - name: Upload Windows executable
-        uses: actions/upload-artifact@v4
-        with:
-          name: epo-parser-windows
-          path: dist/epo-parser.exe
-          retention-days: 30

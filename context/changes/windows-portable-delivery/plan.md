@@ -372,9 +372,9 @@ Brak migracji danych. Użytkownicy przechodzą z `python main.py` (dev) na `epo-
 
 #### Automated
 
-- [x] 1.1 `pip install -e ".[dev]"` — pyinstaller w dev deps
-- [x] 1.2 `pytest tests/test_pdf_resources.py -v` — green
-- [x] 1.3 `pytest -v` — pełna regresja green
+- [x] 1.1 `pip install -e ".[dev]"` — pyinstaller w dev deps — 85e3bf3
+- [x] 1.2 `pytest tests/test_pdf_resources.py -v` — green — 85e3bf3
+- [x] 1.3 `pytest -v` — pełna regresja green — 85e3bf3
 
 #### Manual
 

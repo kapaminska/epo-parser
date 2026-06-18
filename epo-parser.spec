@@ -31,6 +31,7 @@ hiddenimports = [
     "parsers.pp_edoreczenia",
     "pdf",
     "pdf.renderer",
+    "pdf.resources",
 ] + lxml_hiddenimports
 
 a = Analysis(
