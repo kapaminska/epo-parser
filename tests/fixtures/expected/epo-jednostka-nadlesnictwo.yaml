@@ -3,11 +3,14 @@ schema_variant: karta_epo_v1
 expected_warnings: []
 document:
   creation_date: "2026-05-18T09:12:44"
+  document_title: null
   shipments:
     - tracking_number: "PUH7443447077111"
       dispatch_date: "2026-05-10T07:45:00"
       reference: "LP/W/2026/0187"
       kind: "decyzja administracyjna"
+      proof_id: null
+      sender: null
       recipient:
         name: "PIOTR LEŚNY"
         postal_code: "05-070"
@@ -15,6 +18,8 @@ document:
         street: "LEŚNA"
         house_number: "3A"
         apartment: "2"
+        edelivery_address: null
+        party_kind: null
       delivery_event:
         status_code: 6
         non_delivery_code: 2
@@ -37,4 +42,6 @@ document:
         street: "Leśna"
         house_number: "1"
         apartment: null
+      attachments: []
+      edelivery_receipt: null
       has_outer_signature: true

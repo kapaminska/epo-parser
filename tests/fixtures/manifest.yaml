@@ -33,3 +33,21 @@
   expected: "expected/Wiadomość EZD (Elektroniczne potwierdzenie odbioru - nieodebrana)(3).yaml"
   scenario_pl: "Produkcyjny eksport EZD — nieodebrana"
   schema_variant: karta_epo_v1
+
+- id: crd-zw-856-2025
+  xml: "ZW.224.1.856.2025 (Potwierdzenie otrzymania).xml"
+  expected: expected/crd-zw-856-2025.yaml
+  scenario_pl: "CRD — adresat osoba fizyczna, 2 załączniki"
+  schema_variant: crd_potwierdzenie_otrzymania_v1
+
+- id: crd-zw-840-2025
+  xml: "Znak sprawy_ ZW.224.1.840.2025 (Potwierdzenie otrzymania).xml"
+  expected: expected/crd-zw-840-2025.yaml
+  scenario_pl: "CRD — adresat osoba prawna, 3 załączniki"
+  schema_variant: crd_potwierdzenie_otrzymania_v1
+
+- id: crd-zw-932-2025
+  xml: "Znak sprawy_ ZW.224.1.932.2025 (Potwierdzenie otrzymania).xml"
+  expected: expected/crd-zw-932-2025.yaml
+  scenario_pl: "CRD — brak sygnatury ZW w załącznikach"
+  schema_variant: crd_potwierdzenie_otrzymania_v1

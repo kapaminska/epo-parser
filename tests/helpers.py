@@ -5,10 +5,13 @@ from __future__ import annotations
 from typing import Any
 
 from domain.model import (
+    Attachment,
     DeliveryEvent,
+    EdeliveryReceipt,
     EpoDocument,
     Operator,
     ParseWarning,
+    Party,
     PostalUnit,
     Recipient,
     Shipment,
@@ -35,6 +38,26 @@ def _assert_optional_object(
             )
 
 
+def _assert_attachments_match(
+    actual: tuple[Attachment, ...],
+    expected: list[dict[str, Any]],
+    path: str,
+) -> None:
+    if len(actual) != len(expected):
+        raise AssertionError(
+            f"{path}: expected {len(expected)} attachment(s), got {len(actual)}"
+        )
+    for index, (actual_attachment, expected_attachment) in enumerate(
+        zip(actual, expected, strict=True)
+    ):
+        _assert_optional_object(
+            actual_attachment,
+            expected_attachment,
+            Attachment,
+            f"{path}[{index}]",
+        )
+
+
 def assert_document_matches_golden(actual: EpoDocument, golden: dict[str, Any]) -> None:
     """Compare a parsed ``EpoDocument`` against golden YAML ``document`` data."""
     document = golden["document"]
@@ -42,6 +65,11 @@ def assert_document_matches_golden(actual: EpoDocument, golden: dict[str, Any]) 
         raise AssertionError(
             "document.creation_date: "
             f"expected {document.get('creation_date')!r}, got {actual.creation_date!r}"
+        )
+    if actual.document_title != document.get("document_title"):
+        raise AssertionError(
+            "document.document_title: "
+            f"expected {document.get('document_title')!r}, got {actual.document_title!r}"
         )
 
     expected_shipments = document.get("shipments", [])
@@ -61,6 +89,7 @@ def assert_document_matches_golden(actual: EpoDocument, golden: dict[str, Any]) 
             "reference",
             "kind",
             "has_outer_signature",
+            "proof_id",
         ):
             actual_value = getattr(actual_shipment, field_name)
             expected_value = expected_shipment.get(field_name)
@@ -92,6 +121,23 @@ def assert_document_matches_golden(actual: EpoDocument, golden: dict[str, Any]) 
             expected_shipment.get("postal_unit"),
             PostalUnit,
             f"{prefix}.postal_unit",
+        )
+        _assert_optional_object(
+            actual_shipment.sender,
+            expected_shipment.get("sender"),
+            Party,
+            f"{prefix}.sender",
+        )
+        _assert_optional_object(
+            actual_shipment.edelivery_receipt,
+            expected_shipment.get("edelivery_receipt"),
+            EdeliveryReceipt,
+            f"{prefix}.edelivery_receipt",
+        )
+        _assert_attachments_match(
+            actual_shipment.attachments,
+            expected_shipment.get("attachments", []),
+            f"{prefix}.attachments",
         )
 
     expected_warnings = golden.get("expected_warnings", [])

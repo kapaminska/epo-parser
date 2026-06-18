@@ -9,11 +9,14 @@ import pytest
 import yaml
 from lxml import etree
 
-from conftest import FIXTURES_DIR, KARTA_EPO_NS, load_manifest
+from conftest import CRD_POTWIERDZENIE_NS, FIXTURES_DIR, KARTA_EPO_NS, load_manifest
 from domain.model import (
+    Attachment,
     DeliveryEvent,
+    EdeliveryReceipt,
     Operator,
     ParseWarning,
+    Party,
     PostalUnit,
     Recipient,
     Shipment,
@@ -43,8 +46,18 @@ def _assert_dict_keys_match_dataclass(data: dict, cls: type, path: str) -> None:
         )
 
 
+def _validate_attachments(attachments: object, path: str) -> None:
+    assert isinstance(attachments, list), f"{path}.attachments must be a list"
+    for index, attachment in enumerate(attachments):
+        _assert_dict_keys_match_dataclass(
+            attachment, Attachment, f"{path}.attachments[{index}]"
+        )
+
+
 def _validate_document_shape(document: dict, path: str = "document") -> None:
-    assert "creation_date" in document, f"{path}: missing creation_date"
+    assert set(document.keys()) == {"creation_date", "document_title", "shipments"}, (
+        f"{path}: expected keys creation_date, document_title, shipments"
+    )
     shipments = document.get("shipments")
     assert isinstance(shipments, list), f"{path}.shipments must be a list"
     assert shipments, f"{path}.shipments must not be empty"
@@ -60,6 +73,15 @@ def _validate_document_shape(document: dict, path: str = "document") -> None:
         postal_unit = shipment.get("postal_unit")
         if postal_unit is not None:
             _assert_dict_keys_match_dataclass(postal_unit, PostalUnit, f"{shipment_path}.postal_unit")
+        sender = shipment.get("sender")
+        if sender is not None:
+            _assert_dict_keys_match_dataclass(sender, Party, f"{shipment_path}.sender")
+        edelivery_receipt = shipment.get("edelivery_receipt")
+        if edelivery_receipt is not None:
+            _assert_dict_keys_match_dataclass(
+                edelivery_receipt, EdeliveryReceipt, f"{shipment_path}.edelivery_receipt"
+            )
+        _validate_attachments(shipment.get("attachments"), shipment_path)
 
 
 def test_manifest_lists_all_xml_fixtures() -> None:
@@ -78,8 +100,25 @@ def test_each_fixture_is_well_formed_xml(entry: dict) -> None:
 def test_each_fixture_has_parseable_root(entry: dict) -> None:
     xml_path = FIXTURES_DIR / entry["xml"]
     root = etree.parse(str(xml_path)).getroot()
-    assert root.tag.endswith("TabletKartaEpo")
-    assert root.nsmap.get(root.prefix or "mstns") == KARTA_EPO_NS or KARTA_EPO_NS in root.nsmap.values()
+    variant = entry["schema_variant"]
+
+    if variant == "karta_epo_v1":
+        assert root.tag.endswith("TabletKartaEpo")
+        assert (
+            root.nsmap.get(root.prefix or "mstns") == KARTA_EPO_NS
+            or KARTA_EPO_NS in root.nsmap.values()
+        )
+        return
+
+    if variant == "crd_potwierdzenie_otrzymania_v1":
+        assert root.tag.endswith("Dokument")
+        assert (
+            root.nsmap.get(root.prefix) == CRD_POTWIERDZENIE_NS
+            or CRD_POTWIERDZENIE_NS in root.nsmap.values()
+        )
+        return
+
+    pytest.fail(f"Unknown schema_variant: {variant!r}")
 
 
 @pytest.mark.parametrize("entry", _manifest_entries(), ids=lambda entry: entry["id"])
@@ -93,9 +132,7 @@ def test_golden_yaml_matches_document_schema(entry: dict) -> None:
     golden = _load_golden(FIXTURES_DIR / entry["expected"])
     assert golden["id"] == entry["id"]
     assert golden["schema_variant"] == entry["schema_variant"]
-    document = golden["document"]
-    assert set(document.keys()) == {"creation_date", "shipments"}
-    _validate_document_shape(document)
+    _validate_document_shape(golden["document"])
 
 
 @pytest.mark.parametrize("entry", _manifest_entries(), ids=lambda entry: entry["id"])

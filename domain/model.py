@@ -1,7 +1,7 @@
 """Canonical EPO document model for PP e-Doręczenia adapters.
 
 Types describe structured fields extracted from ``TabletKartaEpo`` XML
-(``KartaEPO.xsd``). No sender/nadawca field — not present in current fixtures.
+(``KartaEPO.xsd``) and CRD ``Dokument`` receipts (wzór 10856/2021).
 """
 
 from __future__ import annotations
@@ -18,6 +18,38 @@ class ParseWarning:
 
 
 @dataclass(frozen=True, slots=True)
+class Party:
+    """Correspondence party (CRD sender or legal entity addressee)."""
+
+    party_kind: str | None
+    name: str | None
+    edelivery_address: str | None
+
+
+@dataclass(frozen=True, slots=True)
+class Attachment:
+    """CRD message attachment metadata from ``DaneZalaczniki``."""
+
+    attachment_id: str | None
+    name: str | None
+    size_bytes: int | None
+    is_message_body: bool
+
+
+@dataclass(frozen=True, slots=True)
+class EdeliveryReceipt:
+    """E-delivery receipt block from CRD ``TrescDokumentu``."""
+
+    description: str | None
+    dispatch_date: str | None
+    dispatch_acceptance_date: str | None
+    made_available_date: str | None
+    delivered_to_recipient_date: str | None
+    delivery_mode: str | None
+    legal_footer: str | None
+
+
+@dataclass(frozen=True, slots=True)
 class Recipient:
     """Delivery addressee address block."""
 
@@ -27,6 +59,8 @@ class Recipient:
     street: str | None
     house_number: str | None
     apartment: str | None
+    edelivery_address: str | None = None
+    party_kind: str | None = None
 
 
 @dataclass(frozen=True, slots=True)
@@ -68,7 +102,7 @@ class DeliveryEvent:
 
 @dataclass(frozen=True, slots=True)
 class Shipment:
-    """Single shipment on an EPO card (MVP fixtures contain exactly one)."""
+    """Single shipment on an EPO card or CRD receipt (MVP fixtures: one each)."""
 
     tracking_number: str | None
     dispatch_date: str | None
@@ -79,12 +113,17 @@ class Shipment:
     operator: Operator
     postal_unit: PostalUnit | None
     has_outer_signature: bool
+    sender: Party | None = None
+    attachments: tuple[Attachment, ...] = ()
+    edelivery_receipt: EdeliveryReceipt | None = None
+    proof_id: str | None = None
 
 
 @dataclass(frozen=True, slots=True)
 class EpoDocument:
-    """Canonical representation of one EPO card."""
+    """Canonical representation of one EPO card or CRD receipt."""
 
     creation_date: str | None
     shipments: list[Shipment]
     warnings: list[ParseWarning]
+    document_title: str | None = None

@@ -3,11 +3,14 @@ schema_variant: karta_epo_v1
 expected_warnings: []
 document:
   creation_date: "2026-02-20T11:33:17"
+  document_title: null
   shipments:
     - tracking_number: "PUH7443447077222"
       dispatch_date: "2026-01-28T13:20:00"
       reference: "LP/W/2026/0061"
       kind: "wezwanie"
+      proof_id: null
+      sender: null
       recipient:
         name: "BARBARA WÓJCIK"
         postal_code: "05-090"
@@ -15,6 +18,8 @@ document:
         street: "POCZTOWA"
         house_number: "5"
         apartment: null
+        edelivery_address: null
+        party_kind: null
       delivery_event:
         status_code: 4
         non_delivery_code: 1
@@ -30,4 +35,6 @@ document:
         post_office_name: "Placówka Pocztowa Marki"
         post_office_address: "05-090  Marki  Pocztowa  10"
       postal_unit: null
+      attachments: []
+      edelivery_receipt: null
       has_outer_signature: true

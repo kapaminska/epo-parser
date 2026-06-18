@@ -3,11 +3,14 @@ schema_variant: karta_epo_v1
 expected_warnings: []
 document:
   creation_date: "2026-04-01T16:05:33"
+  document_title: null
   shipments:
     - tracking_number: "PUH7443447077999"
       dispatch_date: "2026-03-20T08:00:00"
       reference: "LP/W/2026/0103"
       kind: "pismo urzędowe"
+      proof_id: null
+      sender: null
       recipient:
         name: "JAN KOWALSKI"
         postal_code: "05-500"
@@ -15,6 +18,8 @@ document:
         street: "LIPOWA"
         house_number: "7"
         apartment: null
+        edelivery_address: null
+        party_kind: null
       delivery_event:
         status_code: 1
         non_delivery_code: 0
@@ -30,4 +35,6 @@ document:
         post_office_name: "Placówka Pocztowa Piaseczno"
         post_office_address: "05-500  Piaseczno  Puławska  22"
       postal_unit: null
+      attachments: []
+      edelivery_receipt: null
       has_outer_signature: true

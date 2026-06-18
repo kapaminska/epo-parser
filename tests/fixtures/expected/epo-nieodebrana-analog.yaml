@@ -3,11 +3,14 @@ schema_variant: karta_epo_v1
 expected_warnings: []
 document:
   creation_date: "2026-03-12T14:22:01"
+  document_title: null
   shipments:
     - tracking_number: "PUH7443447077888"
       dispatch_date: "2026-02-15T09:30:00"
       reference: "LP/W/2026/0042"
       kind: "zawiadomienie"
+      proof_id: null
+      sender: null
       recipient:
         name: "ANNA NOWAK"
         postal_code: "05-120"
@@ -15,6 +18,8 @@ document:
         street: "KWIATOWA"
         house_number: "12"
         apartment: "4"
+        edelivery_address: null
+        party_kind: null
       delivery_event:
         status_code: 6
         non_delivery_code: 3
@@ -30,4 +35,6 @@ document:
         post_office_name: "Placówka Pocztowa Legionowo"
         post_office_address: "05-120  Legionowo  Piłsudskiego  8"
       postal_unit: null
+      attachments: []
+      edelivery_receipt: null
       has_outer_signature: true

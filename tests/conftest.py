@@ -9,6 +9,7 @@ import yaml
 
 FIXTURES_DIR = Path(__file__).resolve().parent / "fixtures"
 KARTA_EPO_NS = "http://msepo.gov.pl/epo/XSD/KartaEPO.xsd"
+CRD_POTWIERDZENIE_NS = "http://crd.gov.pl/wzor/2021/09/01/10856/"
 
 
 def load_manifest() -> list[dict[str, Any]]:

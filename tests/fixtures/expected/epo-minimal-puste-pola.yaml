@@ -9,11 +9,14 @@ expected_warnings:
     message: "Brak danych wydającego"
 document:
   creation_date: "2026-01-10T12:00:00"
+  document_title: null
   shipments:
     - tracking_number: "PUH7443447077001"
       dispatch_date: "2026-01-05T10:00:00"
       reference: null
       kind: null
+      proof_id: null
+      sender: null
       recipient:
         name: "ADRESAT TESTOWY"
         postal_code: "00-001"
@@ -21,6 +24,8 @@ document:
         street: null
         house_number: null
         apartment: null
+        edelivery_address: null
+        party_kind: null
       delivery_event:
         status_code: 6
         non_delivery_code: 3
@@ -36,4 +41,6 @@ document:
         post_office_name: null
         post_office_address: null
       postal_unit: null
+      attachments: []
+      edelivery_receipt: null
       has_outer_signature: false
