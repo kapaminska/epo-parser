@@ -16,7 +16,7 @@ EPO Parser is a Python CLI desktop app (PyInstaller `.exe`) that converts Polish
 - `pip install -e ".[dev]"` — install package and dev deps (once `pyproject.toml` exists).
 - `pytest` — run tests (`tests/`, fixtures under `tests/fixtures/`).
 - `python -m epo_parser` or `python main.py` — run locally before packaging.
-- PyInstaller one-file build — push to `main` triggers GitHub Actions on `windows-latest`; download `epo-parser.exe` from the run Artifacts (`epo-parser-windows`).
+- PyInstaller one-file build — push to `main` triggers GitHub Actions on `windows-latest`; download `epo-parser.exe` from run Artifacts (`epo-parser-windows`) or from [GitHub Releases](https://github.com/kapaminska/epo-parser/releases/latest) after a `v*` tag.
 
 ## Project Structure
 
