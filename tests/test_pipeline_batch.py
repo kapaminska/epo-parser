@@ -38,3 +38,16 @@ def test_convert_xml_files_preserves_order(tmp_path: Path) -> None:
 
     assert [result.source.name for result in results] == ["first.xml", "second.xml"]
     assert all(result.status == "success" for result in results)
+
+
+def test_convert_xml_files_mixed_karta_epo_and_crd(tmp_path: Path) -> None:
+    karta_xml = FIXTURES_DIR / "epo-odebrana-osobiscie.xml"
+    crd_xml = FIXTURES_DIR / "ZW.224.1.856.2025 (Potwierdzenie otrzymania).xml"
+    shutil.copy(karta_xml, tmp_path / "epo-odebrana-osobiscie.xml")
+    shutil.copy(crd_xml, tmp_path / crd_xml.name)
+
+    results = convert_xml_files([tmp_path / "epo-odebrana-osobiscie.xml", tmp_path / crd_xml.name])
+
+    assert len(results) == 2
+    assert all(result.status == "success" for result in results)
+    assert all(result.pdf_path is not None for result in results)

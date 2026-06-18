@@ -308,7 +308,7 @@ Brak migracji danych. Istniejące golden YAML wymagają jednorazowej aktualizacj
 
 #### Automated
 
-- [ ] 3.1 `pytest tests/test_pdf_renderer.py -v` — all green
+- [x] 3.1 `pytest tests/test_pdf_renderer.py -v` — all green — c1ed8d4
 
 #### Manual
 
