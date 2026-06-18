@@ -15,8 +15,9 @@ from domain.model import (
     Recipient,
     Shipment,
 )
+from pdf.resources import package_resource
 
-FONT_PATH = Path(__file__).resolve().parent / "assets" / "DejaVuSans.ttf"
+FONT_PATH = package_resource("assets/DejaVuSans.ttf")
 # FR-005: inline legal disclaimer (not a per-page footer hook).
 LEGAL_FOOTER = (
     "Niniejszy plik PDF stanowi wyłącznie wizualizację. "

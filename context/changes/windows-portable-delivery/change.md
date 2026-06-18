@@ -1,9 +1,9 @@
 ---
 change_id: windows-portable-delivery
 title: Windows portable delivery
-status: new
+status: implementing
 created: 2026-06-17
-updated: 2026-06-17
+updated: 2026-06-18
 archived_at: null
 ---
 
