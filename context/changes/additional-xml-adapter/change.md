@@ -1,7 +1,7 @@
 ---
 change_id: additional-xml-adapter
 title: CRD Potwierdzenie otrzymania adapter (S-06)
-status: implementing
+status: implemented
 created: 2026-06-18
 updated: 2026-06-18
 archived_at: null

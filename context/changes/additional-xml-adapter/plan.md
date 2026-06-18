@@ -318,7 +318,7 @@ Brak migracji danych. Istniejące golden YAML wymagają jednorazowej aktualizacj
 
 #### Automated
 
-- [ ] 4.1 `pytest -v` — full suite green
+- [x] 4.1 `pytest -v` — full suite green — 77ac4c0
 
 #### Manual
 
