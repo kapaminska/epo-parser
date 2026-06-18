@@ -7,7 +7,7 @@ from pathlib import Path
 
 from domain.conversion import ConversionResult
 from domain.naming import resolve_output_path
-from parsers.pp_edoreczenia import ParseError, parse_pp_epo
+from parsers.registry import ParseError, parse_epo_xml
 from pdf.renderer import render_epo_pdf
 
 
@@ -22,7 +22,7 @@ def convert_xml_file(
     target_dir.mkdir(parents=True, exist_ok=True)
 
     try:
-        document = parse_pp_epo(resolved)
+        document = parse_epo_xml(resolved)
     except ParseError as exc:
         return ConversionResult(
             source=resolved,

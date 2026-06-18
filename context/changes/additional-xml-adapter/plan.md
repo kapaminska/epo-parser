@@ -287,11 +287,11 @@ Brak migracji danych. Istniejące golden YAML wymagają jednorazowej aktualizacj
 
 #### Automated
 
-- [x] 1.1 `pytest tests/test_fixture_corpus.py -v` — struktura golden i manifest OK
+- [x] 1.1 `pytest tests/test_fixture_corpus.py -v` — struktura golden i manifest OK — aa83bdf
 
 #### Manual
 
-- [x] 1.2 Weryfikacja ręczna wartości `expected/crd-zw-856-2025.yaml` vs XML
+- [x] 1.2 Weryfikacja ręczna wartości `expected/crd-zw-856-2025.yaml` vs XML — aa83bdf
 
 ### Phase 2: Adapter CRD i rejestr parserów
 

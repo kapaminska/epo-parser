@@ -1,8 +1,4 @@
-"""Parametrized golden tests for the PP e-Doręczenia parser.
-
-S-01 handoff: remove ``@pytest.mark.skip``, implement ``parse_pp_epo`` in
-``parsers.pp_edoreczenia``, and ensure all six manifest cases pass.
-"""
+"""Parametrized golden tests for EPO XML parsers (karta EPO + CRD)."""
 
 from __future__ import annotations
 
@@ -17,11 +13,11 @@ from helpers import assert_document_matches_golden
 
 @pytest.mark.parametrize("entry", load_manifest(), ids=lambda entry: entry["id"])
 def test_parse_matches_golden(entry: dict) -> None:
-    parse_pp_epo = pytest.importorskip("parsers.pp_edoreczenia").parse_pp_epo
+    parse_epo_xml = pytest.importorskip("parsers.registry").parse_epo_xml
 
     xml_path = FIXTURES_DIR / entry["xml"]
     expected_path = FIXTURES_DIR / entry["expected"]
     golden = yaml.safe_load(expected_path.read_text(encoding="utf-8"))
 
-    actual = parse_pp_epo(Path(xml_path))
+    actual = parse_epo_xml(Path(xml_path))
     assert_document_matches_golden(actual, golden)
