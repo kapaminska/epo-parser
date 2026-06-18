@@ -127,3 +127,24 @@ def test_render_epo_pdf_includes_warning_messages(tmp_path: Path) -> None:
     text = _extract_pdf_text(output_path)
     for warning in golden["expected_warnings"]:
         assert warning["message"] in text
+
+
+@pytest.mark.parametrize("fixture_id", ["crd-zw-856-2025"])
+def test_render_crd_pdf_contains_edelivery_sections(
+    fixture_id: str,
+    tmp_path: Path,
+) -> None:
+    parse_epo_xml = pytest.importorskip("parsers.registry").parse_epo_xml
+    entry = _manifest_by_id()[fixture_id]
+    document = parse_epo_xml(FIXTURES_DIR / entry["xml"])
+    output_path = tmp_path / f"{fixture_id}.pdf"
+
+    render_epo_pdf(document, output_path)
+
+    text = _extract_pdf_text(output_path)
+    assert "Potwierdzenie otrzymania" in text
+    assert "Nadawca" in text
+    assert "REGIONALNA DYREKCJA" in text
+    assert "PPSA-E-aaaa1111-bbbb-2222-cccc-ddddeeee0001" in text
+    assert "ZW.224.1.856" in text
+    assert "XAdES" in text

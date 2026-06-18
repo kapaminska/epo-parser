@@ -297,12 +297,12 @@ Brak migracji danych. Istniejące golden YAML wymagają jednorazowej aktualizacj
 
 #### Automated
 
-- [ ] 2.1 `pytest tests/test_pp_epo_parser.py -v` — 9/9 green
-- [ ] 2.2 `pytest tests/test_fixture_corpus.py -v` — bez regresji
+- [x] 2.1 `pytest tests/test_pp_epo_parser.py -v` — 9/9 green — 792d470
+- [x] 2.2 `pytest tests/test_fixture_corpus.py -v` — bez regresji — 792d470
 
 #### Manual
 
-- [ ] 2.3 Import i parse jednego pliku CRD bez wyjątku
+- [x] 2.3 Import i parse jednego pliku CRD bez wyjątku — 792d470
 
 ### Phase 3: PDF CRD i testy renderu
 
