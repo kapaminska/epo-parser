@@ -1,0 +1,18 @@
+EPO Parser — instrukcja (Windows 10 / 11)
+
+1. Rozpakuj ten archiwum ZIP (PPM → Wyodrębnij wszystko).
+2. Skopiuj plik epo-parser.exe do folderu ze sprawą — tam, gdzie leżą pliki .xml.
+3. Kliknij dwukrotnie na epo-parser.exe.
+
+Pojawi się czarne okno (konsola). Nie zamykaj go ręcznie — program sam
+zakończy pracę i okno zniknie po przetworzeniu plików.
+
+Pliki wynikowe (PDF-y oraz epo-konwersja.txt) zapiszą się w tym samym
+folderze co pliki XML.
+
+Uwagi:
+- Python nie jest potrzebny — program działa offline.
+- Istniejące PDF-y nie są nadpisywane (przy kolizji nazw: np. " (2).pdf").
+- Szczegóły i błędy: plik epo-konwersja.txt w folderze sprawy.
+
+Pobierz nowsze wersje: https://github.com/kapaminska/epo-parser/releases/latest

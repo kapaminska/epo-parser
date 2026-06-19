@@ -71,11 +71,25 @@ jobs:
             Pop-Location
           }
 
-      - name: Upload Windows executable
+      - name: Package ZIP for distribution
+        shell: pwsh
+        run: |
+          $zipPath = Join-Path $env:GITHUB_WORKSPACE 'dist/epo-parser.zip'
+          $files = @(
+            (Join-Path $env:GITHUB_WORKSPACE 'dist/epo-parser.exe'),
+            (Join-Path $env:GITHUB_WORKSPACE '.github/packaging/INSTRUKCJA.txt')
+          )
+          if (Test-Path $zipPath) { Remove-Item $zipPath -Force }
+          Compress-Archive -Path $files -DestinationPath $zipPath -CompressionLevel Optimal
+          $zipBytes = (Get-Item $zipPath).Length
+          $zipMB = [math]::Round($zipBytes / 1MB, 2)
+          Write-Host "epo-parser.zip size: $zipMB MB ($zipBytes bytes)"
+
+      - name: Upload Windows package
         uses: actions/upload-artifact@v4
         with:
           name: epo-parser-windows
-          path: dist/epo-parser.exe
+          path: dist/epo-parser.zip
           retention-days: 30
 
       - name: Publish GitHub Release
@@ -84,6 +98,6 @@ jobs:
         with:
           name: EPO Parser ${{ github.ref_name }}
           body_path: .github/release-body.md
-          files: dist/epo-parser.exe
+          files: dist/epo-parser.zip
           draft: false
           prerelease: false

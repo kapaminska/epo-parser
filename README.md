@@ -8,8 +8,8 @@ Supported formats: **karta EPO** (`TabletKartaEpo`) and **CRD Potwierdzenie otrz
 
 **[Pobierz najnowszą wersję (GitHub Releases)](https://github.com/kapaminska/epo-parser/releases/latest)**
 
-1. Pobierz `epo-parser.exe` z sekcji **Assets** na stronie release.
-2. Skopiuj plik do folderu ze sprawą (tam, gdzie leżą pliki `.xml`).
+1. Pobierz **`epo-parser.zip`** z sekcji **Assets** na stronie release (ZIP zamiast samego `.exe` — łatwiejsze pobieranie w sieciach firmowych).
+2. Rozpakuj ZIP i **skopiuj** `epo-parser.exe` do folderu ze sprawą (tam, gdzie leżą pliki `.xml`).
 3. Kliknij **dwukrotnie** na `epo-parser.exe`.
 
 Pojawi się **czarne okno** — **nie zamykaj go ręcznie**. Program sam zakończy pracę i okno zniknie po przetworzeniu plików. PDF-y oraz `epo-konwersja.txt` zapiszą się **w tym samym folderze**.
