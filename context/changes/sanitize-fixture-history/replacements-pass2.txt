@@ -1,0 +1,6 @@
+literal:<mstns:RejonLastName>STONIO</mstns:RejonLastName>==><mstns:RejonLastName>MALINOWSKA</mstns:RejonLastName>
+literal:last_name: "STONIO"==>last_name: "MALINOWSKA"
+literal:last_name: STONIO==>last_name: MALINOWSKA
+literal:985879==>990002
+literal:05-096  Ząbki  Jacka Malczewskiego  3==>05-090  Marki  Pocztowa  10
+literal:Id="A501A"==>Id="T002T"
