@@ -1,0 +1,46 @@
+id: epo-ezd-nieodebrana
+schema_variant: karta_epo_v1
+expected_warnings:
+- code: missing_city
+  message: Brak miejscowości adresata
+- code: missing_reference
+  message: Brak sygnatury
+- code: missing_kind
+  message: Brak rodzaju przesyłki
+document:
+  creation_date: '2026-02-06T09:51:09'
+  document_title: null
+  shipments:
+  - tracking_number: PUH7443447077100
+    dispatch_date: '2026-01-09T11:02:19'
+    reference: null
+    kind: null
+    proof_id: null
+    sender: null
+    recipient:
+      name: PIOTR SYNTELOW
+      postal_code: 05-091
+      city: null
+      street: ULICA TESTOWA
+      house_number: '12'
+      apartment: '2'
+      edelivery_address: null
+      party_kind: null
+    delivery_event:
+      status_code: 6
+      non_delivery_code: 3
+      system_timestamp: '2026-02-06T09:50:36'
+      awizo_at_parcel_location: 0
+      awizo_at_notice_location: 0
+      awizo_date_1: '2026-01-21T13:58:45'
+      awizo_date_2: '2026-01-29T09:48:54'
+      recipient_signature: null
+    operator:
+      first_name: JAN
+      last_name: KASINA
+      post_office_name: Placówka Pocztowa Testowa
+      post_office_address: 05-090  Marki  Testowa  1
+    postal_unit: null
+    attachments: []
+    edelivery_receipt: null
+    has_outer_signature: true

@@ -111,7 +111,7 @@ Rozszerzyć typy domenowe i przygotować manifest + golden YAML (3 nowe + aktual
 
 #### Manual Verification:
 
-- Ręczna weryfikacja wartości w `expected/crd-zw-856-2025.yaml` vs XML (nadawca RDL, adresat ANNA SYNTELOWA, daty, 2 załączniki)
+- Ręczna weryfikacja wartości w `expected/crd-osoba-fizyczna.yaml` vs XML (nadawca testowy, adresat osoba fizyczna, daty, 2 załączniki)
 
 **Implementation Note**: Po Phase 1 — potwierdzenie golden CRD przed implementacją parsera.
 

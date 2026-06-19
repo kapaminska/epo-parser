@@ -2,39 +2,39 @@ id: epo-nieodebrana-analog
 schema_variant: karta_epo_v1
 expected_warnings: []
 document:
-  creation_date: "2026-03-12T14:22:01"
+  creation_date: '2026-03-12T14:22:01'
   document_title: null
   shipments:
-    - tracking_number: "PUH7443447077888"
-      dispatch_date: "2026-02-15T09:30:00"
-      reference: "LP/W/2026/0042"
-      kind: "zawiadomienie"
-      proof_id: null
-      sender: null
-      recipient:
-        name: "ANNA NOWAK"
-        postal_code: "05-120"
-        city: "LEGIONOWO"
-        street: "KWIATOWA"
-        house_number: "12"
-        apartment: "4"
-        edelivery_address: null
-        party_kind: null
-      delivery_event:
-        status_code: 6
-        non_delivery_code: 3
-        system_timestamp: "2026-03-12T14:20:00"
-        awizo_at_parcel_location: 0
-        awizo_at_notice_location: 0
-        awizo_date_1: "2026-02-28T10:15:00"
-        awizo_date_2: "2026-03-08T11:45:00"
-        recipient_signature: null
-      operator:
-        first_name: "TOMASZ"
-        last_name: "WIŚNIEWSKI"
-        post_office_name: "Placówka Pocztowa Legionowo"
-        post_office_address: "05-120  Legionowo  Piłsudskiego  8"
-      postal_unit: null
-      attachments: []
-      edelivery_receipt: null
-      has_outer_signature: true
+  - tracking_number: PUH7443447077888
+    dispatch_date: '2026-02-15T09:30:00'
+    reference: LP/W/2026/0042
+    kind: zawiadomienie
+    proof_id: null
+    sender: null
+    recipient:
+      name: ANNA NOWAK
+      postal_code: 05-120
+      city: LEGIONOWO
+      street: KWIATOWA
+      house_number: '12'
+      apartment: '4'
+      edelivery_address: null
+      party_kind: null
+    delivery_event:
+      status_code: 6
+      non_delivery_code: 3
+      system_timestamp: '2026-03-12T14:20:00'
+      awizo_at_parcel_location: 0
+      awizo_at_notice_location: 0
+      awizo_date_1: '2026-02-28T10:15:00'
+      awizo_date_2: '2026-03-08T11:45:00'
+      recipient_signature: null
+    operator:
+      first_name: TOMASZ
+      last_name: WIŚNIEWSKI
+      post_office_name: Placówka Pocztowa Legionowo
+      post_office_address: 05-120  Legionowo  Piłsudskiego  8
+    postal_unit: null
+    attachments: []
+    edelivery_receipt: null
+    has_outer_signature: true

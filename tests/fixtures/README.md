@@ -1,6 +1,8 @@
 # Korpus fixture EPO (F-01 + S-06)
 
-Reprezentatywne próbki XML z oczekiwanymi wartościami kanonicznymi w `expected/*.yaml`. Służy weryfikacji adapterów PP e-Doręczenia: karta EPO (S-01) i CRD „Potwierdzenie otrzymania” (S-06).
+Reprezentatywne **syntetyczne** próbki XML z oczekiwanymi wartościami kanonicznymi w `expected/*.yaml`. Służy weryfikacji adapterów PP e-Doręczenia: karta EPO (S-01) i CRD „Potwierdzenie otrzymania” (S-06).
+
+**Uwaga:** Wszystkie dane osobowe i identyfikatory w korpusie są fikcyjne. Nie commituj produkcyjnych eksportów XML.
 
 ## Indeks korpusu
 
@@ -11,10 +13,10 @@ Reprezentatywne próbki XML z oczekiwanymi wartościami kanonicznymi w `expected
 | `epo-jednostka-nadlesnictwo.xml` | Pełny blok `TabletJednostkaMS` (Nadleśnictwo) | `karta_epo_v1` | `expected/epo-jednostka-nadlesnictwo.yaml` |
 | `epo-nieodebrana-analog.xml` | Nieodebrana — doręczenie analogowe, daty awizo | `karta_epo_v1` | `expected/epo-nieodebrana-analog.yaml` |
 | `epo-minimal-puste-pola.xml` | Minimalny XML z wieloma pustymi polami | `karta_epo_v1` | `expected/epo-minimal-puste-pola.yaml` |
-| `Wiadomość EZD (...).xml` | Produkcyjny eksport EZD (minified) | `karta_epo_v1` | `expected/Wiadomość EZD (...).yaml` |
-| `ZW.224.1.856.2025 (Potwierdzenie otrzymania).xml` | CRD — adresat osoba fizyczna, 2 załączniki | `crd_potwierdzenie_otrzymania_v1` | `expected/crd-zw-856-2025.yaml` |
-| `Znak sprawy_ ZW.224.1.840.2025 (...).xml` | CRD — adresat osoba prawna, 3 załączniki | `crd_potwierdzenie_otrzymania_v1` | `expected/crd-zw-840-2025.yaml` |
-| `Znak sprawy_ ZW.224.1.932.2025 (...).xml` | CRD — brak sygnatury `ZW.*` w załącznikach | `crd_potwierdzenie_otrzymania_v1` | `expected/crd-zw-932-2025.yaml` |
+| `Wiadomość EZD (fixture nieodebrana).xml` | Syntetyczny eksport EZD (minified) | `karta_epo_v1` | `expected/Wiadomość EZD (fixture nieodebrana).yaml` |
+| `crd-osoba-fizyczna.xml` | CRD — adresat osoba fizyczna, 2 załączniki | `crd_potwierdzenie_otrzymania_v1` | `expected/crd-osoba-fizyczna.yaml` |
+| `crd-osoba-prawna.xml` | CRD — adresat osoba prawna, 3 załączniki | `crd_potwierdzenie_otrzymania_v1` | `expected/crd-osoba-prawna.yaml` |
+| `crd-zalaczniki-generic.xml` | CRD — brak sygnatury `ZW.*` w załącznikach | `crd_potwierdzenie_otrzymania_v1` | `expected/crd-zalaczniki-generic.yaml` |
 
 Źródło prawdy dla testów: `manifest.yaml` (9 wpisów).
 
@@ -50,8 +52,8 @@ Element główny `Dokument`, namespace `http://crd.gov.pl/wzor/2021/09/01/10856/
 ## Konwencje nazewnictwa
 
 - Syntetyczne scenariusze karta EPO: `epo-<scenariusz>.xml` + `expected/epo-<scenariusz>.yaml`
-- Eksport EZD: oryginalna nazwa pliku z systemu (spacje, nawiasy) — bez zmiany
-- CRD produkcyjne: `expected/crd-zw-<sygnatura>.yaml` (skrót od numeru sprawy w nazwie pliku)
+- Syntetyczny eksport EZD: `Wiadomość EZD (fixture ...).xml` — zachowuje kształt nazwy z systemu (spacje)
+- Syntetyczne CRD: `crd-<scenariusz>.xml` + `expected/crd-<scenariusz>.yaml`
 
 ## Znane luki
 

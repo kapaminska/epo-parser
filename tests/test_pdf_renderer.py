@@ -129,7 +129,7 @@ def test_render_epo_pdf_includes_warning_messages(tmp_path: Path) -> None:
         assert warning["message"] in text
 
 
-@pytest.mark.parametrize("fixture_id", ["crd-zw-856-2025"])
+@pytest.mark.parametrize("fixture_id", ["crd-osoba-fizyczna"])
 def test_render_crd_pdf_contains_edelivery_sections(
     fixture_id: str,
     tmp_path: Path,
@@ -144,7 +144,7 @@ def test_render_crd_pdf_contains_edelivery_sections(
     text = _extract_pdf_text(output_path)
     assert "Potwierdzenie otrzymania" in text
     assert "Nadawca" in text
-    assert "REGIONALNA DYREKCJA" in text
+    assert "NADAWCA TESTOWY LP" in text
     assert "PPSA-E-aaaa1111-bbbb-2222-cccc-ddddeeee0001" in text
-    assert "ZW.224.1.856" in text
+    assert "ZW.999.1.901" in text
     assert "XAdES" in text

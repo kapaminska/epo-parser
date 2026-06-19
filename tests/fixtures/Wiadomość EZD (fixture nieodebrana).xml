@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mstns:TabletKartaEpo xsi:schemaLocation="http://msepo.gov.pl/epo/XSD/KartaEPO.xsd KartaEPO.xsd" xmlns:mstns="http://msepo.gov.pl/epo/XSD/KartaEPO.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<mstns:CreationDate>2026-02-06T09:51:09</mstns:CreationDate>
+<mstns:IDKartaEPO/>
+<mstns:TabletPrzesylki>
+<mstns:TabletPrzesylkaPodpis><mstns:TabletPrzesylka><mstns:IDPrzesylka>{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}</mstns:IDPrzesylka><mstns:NumerNadania>PUH7443447077100</mstns:NumerNadania><mstns:DataNadania>2026-01-09T11:02:19</mstns:DataNadania><mstns:Adresat>PIOTR SYNTELOW</mstns:Adresat><mstns:KodPocztowy>05-091</mstns:KodPocztowy><mstns:Miejscowosc/><mstns:Ulica>ULICA TESTOWA</mstns:Ulica><mstns:Dom>12</mstns:Dom><mstns:Lokal>2</mstns:Lokal><mstns:Sygnatura/><mstns:Rodzaj/><mstns:StatusPrzesylki>6</mstns:StatusPrzesylki><mstns:SystemowaDataOznaczenia>2026-02-06T09:50:36</mstns:SystemowaDataOznaczenia><mstns:ImieINazwiskoOdbiorcy/><mstns:Podpis/><mstns:BrakDoreczenia>3</mstns:BrakDoreczenia><mstns:AwizoMiejscePrzesylki>0</mstns:AwizoMiejscePrzesylki><mstns:AwizoMiejsceZawiadomienia>0</mstns:AwizoMiejsceZawiadomienia><mstns:TabletJednostkaMS><mstns:IDJednostkaMS/><mstns:NazwaJednostki/><mstns:Wydzial/><mstns:Miasto/><mstns:KodPocztowy/><mstns:Ulica/><mstns:Dom/><mstns:Lokal/></mstns:TabletJednostkaMS><DaneBiometryczne><DataPodpisu>2026-02-06T09:50:36</DataPodpisu><DataZapisu>2026-02-06T09:50:36</DataZapisu><IdOperatora>1</IdOperatora><IdUrzadzenia>1</IdUrzadzenia><CzasNaciskList><CzasNacisk><Czas>0</Czas><Nacisk>0</Nacisk><X>0</X><Y>0</Y></CzasNacisk></CzasNaciskList></DaneBiometryczne><mstns:Wydajacy Imie="JAN" Nazwisko="KASINA" Id="T001T" IDPlacowka="990001" NazwaPlacowki="Placówka Pocztowa Testowa" AdresPlacowki="05-090  Marki  Testowa  1" PNIPlacowki="990001"/><mstns:DataAwizo1>2026-01-21T13:58:45</mstns:DataAwizo1><mstns:DataAwizo2>2026-01-29T09:48:54</mstns:DataAwizo2></mstns:TabletPrzesylka><mstns:Podpis>MIIBzgYJKoZIhvcNAQcCoIIBvzCCAbsCAQExDzANBglghkgBZQMEAgEFADALBgkqhkiG9w0BBwExggGWMIIBkgIBATBrMFQxEjAQBgoJkiaJk/IsZAEZFgJwcDETMBEGCgmSJomT8ixkARkWA25ldDEpMCcGA1UEAwwgUG9jenRhIFBvbHNrYSBTLkEuIEVudGVycHJpc2UgQ0ECE0gAAFWe6/PstjZhhSsAAAAAVZ4wDQYJYIZIAWUDBAIBBQAwDQYJKoZIhvcNAQEBBQAEggEAFIXTURESIGEXAMPLE005</mstns:Podpis></mstns:TabletPrzesylkaPodpis>
+</mstns:TabletPrzesylki>
+<mstns:RejonFirstName>JAN</mstns:RejonFirstName>
+<mstns:RejonLastName>KASINA</mstns:RejonLastName>
+<mstns:TabletPlacowkiAwizacyjne>
+<mstns:TabletPlacowka>
+<mstns:IDPlacowka>990001</mstns:IDPlacowka>
+<mstns:Nazwa>AP Testowa Marki</mstns:Nazwa>
+<mstns:PNI>990001</mstns:PNI>
+</mstns:TabletPlacowka>
+</mstns:TabletPlacowkiAwizacyjne>
+<mstns:RejonNumber>0</mstns:RejonNumber>
+<mstns:Number>0</mstns:Number>
+</mstns:TabletKartaEpo>

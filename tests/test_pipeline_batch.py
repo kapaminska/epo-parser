@@ -42,7 +42,7 @@ def test_convert_xml_files_preserves_order(tmp_path: Path) -> None:
 
 def test_convert_xml_files_mixed_karta_epo_and_crd(tmp_path: Path) -> None:
     karta_xml = FIXTURES_DIR / "epo-odebrana-osobiscie.xml"
-    crd_xml = FIXTURES_DIR / "ZW.224.1.856.2025 (Potwierdzenie otrzymania).xml"
+    crd_xml = FIXTURES_DIR / "crd-osoba-fizyczna.xml"
     shutil.copy(karta_xml, tmp_path / "epo-odebrana-osobiscie.xml")
     shutil.copy(crd_xml, tmp_path / crd_xml.name)
 

@@ -1,46 +1,46 @@
 id: epo-minimal-puste-pola
 schema_variant: karta_epo_v1
 expected_warnings:
-  - code: missing_city
-    message: "Brak miejscowości adresata"
-  - code: missing_reference
-    message: "Brak sygnatury"
-  - code: missing_operator
-    message: "Brak danych wydającego"
+- code: missing_city
+  message: Brak miejscowości adresata
+- code: missing_reference
+  message: Brak sygnatury
+- code: missing_operator
+  message: Brak danych wydającego
 document:
-  creation_date: "2026-01-10T12:00:00"
+  creation_date: '2026-01-10T12:00:00'
   document_title: null
   shipments:
-    - tracking_number: "PUH7443447077001"
-      dispatch_date: "2026-01-05T10:00:00"
-      reference: null
-      kind: null
-      proof_id: null
-      sender: null
-      recipient:
-        name: "ADRESAT TESTOWY"
-        postal_code: "00-001"
-        city: null
-        street: null
-        house_number: null
-        apartment: null
-        edelivery_address: null
-        party_kind: null
-      delivery_event:
-        status_code: 6
-        non_delivery_code: 3
-        system_timestamp: "2026-01-10T11:59:00"
-        awizo_at_parcel_location: 0
-        awizo_at_notice_location: 0
-        awizo_date_1: null
-        awizo_date_2: null
-        recipient_signature: null
-      operator:
-        first_name: null
-        last_name: null
-        post_office_name: null
-        post_office_address: null
-      postal_unit: null
-      attachments: []
-      edelivery_receipt: null
-      has_outer_signature: false
+  - tracking_number: PUH7443447077001
+    dispatch_date: '2026-01-05T10:00:00'
+    reference: null
+    kind: null
+    proof_id: null
+    sender: null
+    recipient:
+      name: ADRESAT TESTOWY
+      postal_code: 00-001
+      city: null
+      street: null
+      house_number: null
+      apartment: null
+      edelivery_address: null
+      party_kind: null
+    delivery_event:
+      status_code: 6
+      non_delivery_code: 3
+      system_timestamp: '2026-01-10T11:59:00'
+      awizo_at_parcel_location: 0
+      awizo_at_notice_location: 0
+      awizo_date_1: null
+      awizo_date_2: null
+      recipient_signature: null
+    operator:
+      first_name: null
+      last_name: null
+      post_office_name: null
+      post_office_address: null
+    postal_unit: null
+    attachments: []
+    edelivery_receipt: null
+    has_outer_signature: false

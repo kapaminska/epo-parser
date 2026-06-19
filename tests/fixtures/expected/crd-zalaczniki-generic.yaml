@@ -1,0 +1,62 @@
+id: crd-zalaczniki-generic
+schema_variant: crd_potwierdzenie_otrzymania_v1
+expected_warnings: []
+document:
+  creation_date: null
+  document_title: Potwierdzenie otrzymania
+  shipments:
+  - tracking_number: PPSA-E-cccc3333-dddd-4444-eeee-ffff00000003
+    dispatch_date: '2026-04-20T13:56:40+02:00'
+    reference: null
+    kind: null
+    proof_id: 66666666-7777-8888-9999-aaaaaaaaaa06
+    sender:
+      party_kind: osoba prawna
+      name: NADAWCA TESTOWY LP
+      edelivery_address: AE:PL-10001-10001-AAAAA-01
+    recipient:
+      name: ANNA SYNTELOWA
+      postal_code: null
+      city: null
+      street: null
+      house_number: null
+      apartment: null
+      edelivery_address: AE:PL-40004-40004-DDDDD-04
+      party_kind: osoba fizyczna
+    delivery_event:
+      status_code: 0
+      non_delivery_code: 0
+      system_timestamp: null
+      awizo_at_parcel_location: 0
+      awizo_at_notice_location: 0
+      awizo_date_1: null
+      awizo_date_2: null
+      recipient_signature: null
+    operator:
+      first_name: null
+      last_name: null
+      post_office_name: null
+      post_office_address: null
+    postal_unit: null
+    attachments:
+    - attachment_id: PPSA-E-cccc3333-dddd-4444-eeee-ffff00000003
+      name: Treść wiadomości
+      size_bytes: 30
+      is_message_body: true
+    - attachment_id: 77777777-8888-9999-aaaa-bbbbbbbbbbb7
+      name: decyzja_testowa.pdf
+      size_bytes: 176433
+      is_message_body: false
+    edelivery_receipt:
+      description: Niniejszy dokument stanowi dowód otrzymania w rozumieniu art. 40
+        ustawy z dnia 18 listopada 2020 o doręczeniach elektronicznych
+      dispatch_date: '2026-04-20T13:56:40+02:00'
+      dispatch_acceptance_date: '2026-04-20T13:56:41+02:00'
+      made_available_date: '2026-04-20T13:59:40+02:00'
+      delivered_to_recipient_date: '2026-04-20T14:10:26+02:00'
+      delivery_mode: podstawowy
+      legal_footer: Niniejszy dowód będący dokumentem elektronicznym jest zabezpieczony
+        pieczęcią elektroniczną dostawcy usługi zaufania rejestrowanego doręczenia
+        elektronicznego. Wydruk niniejszego dokumentu elektronicznego stanowi kopię
+        dowodu.
+    has_outer_signature: true

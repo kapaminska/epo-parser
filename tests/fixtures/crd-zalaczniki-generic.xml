@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<Dokument xmlns="http://crd.gov.pl/wzor/2021/09/01/10856/" xmlns:ns8="http://crd.gov.pl/xml/schematy/osoba/2009/11/16/">
+  <OpisDokumentu/>
+  <DaneDokumentu/>
+  <TrescDokumentu format="text/xml" kodowanie="XML" rodzaj="inny">
+    <DaneDokumentu>
+      <TytulDokumentu>Potwierdzenie otrzymania</TytulDokumentu>
+      <OpisDokumentu>Niniejszy dokument stanowi dowód otrzymania w rozumieniu art. 40 ustawy z dnia 18 listopada 2020 o doręczeniach elektronicznych</OpisDokumentu>
+    </DaneDokumentu>
+    <DaneNadawcy>
+      <StronaKorespondencji>
+        <Rodzaj>osoba prawna</Rodzaj>
+        <OsobaPrawna>
+          <NazwaPodmiotu>NADAWCA TESTOWY LP</NazwaPodmiotu>
+        </OsobaPrawna>
+      </StronaKorespondencji>
+      <AdresEDoreczen>AE:PL-10001-10001-AAAAA-01</AdresEDoreczen>
+    </DaneNadawcy>
+    <DaneAdresata>
+      <StronaKorespondencji>
+        <Rodzaj>osoba fizyczna</Rodzaj>
+        <OsobaFizyczna>
+          <ns8:Imie>ANNA</ns8:Imie>
+          <ns8:Nazwisko>SYNTELOWA</ns8:Nazwisko>
+        </OsobaFizyczna>
+      </StronaKorespondencji>
+      <AdresEDoreczen>AE:PL-40004-40004-DDDDD-04</AdresEDoreczen>
+    </DaneAdresata>
+    <DataWyslania>
+      <DataNadaniaPrzesylki>2026-04-20T13:56:40+02:00</DataNadaniaPrzesylki>
+      <DataAkceptacjiNadaniaPrzesylki>2026-04-20T13:56:41+02:00</DataAkceptacjiNadaniaPrzesylki>
+    </DataWyslania>
+    <DataOdbioru>
+      <DataUdostepnieniaDoOdbioru>2026-04-20T13:59:40+02:00</DataUdostepnieniaDoOdbioru>
+      <DataPrzekazaniaAdresatowi>2026-04-20T14:10:26+02:00</DataPrzekazaniaAdresatowi>
+    </DataOdbioru>
+    <DaneWiadomosci>
+      <IdentyfikatorDowoduPotwierdzenia>66666666-7777-8888-9999-aaaaaaaaaa06</IdentyfikatorDowoduPotwierdzenia>
+      <IdentyfikatorWiadomosci>PPSA-E-cccc3333-dddd-4444-eeee-ffff00000003</IdentyfikatorWiadomosci>
+      <TrybDoreczenia>podstawowy</TrybDoreczenia>
+    </DaneWiadomosci>
+    <DaneZalaczniki>
+      <DaneZalacznika>
+        <AtrybutZalacznika nazwaAtrybutu="IdZalacznika">
+          <WartoscAtrybutu>PPSA-E-cccc3333-dddd-4444-eeee-ffff00000003</WartoscAtrybutu>
+        </AtrybutZalacznika>
+        <AtrybutZalacznika nazwaAtrybutu="TrescWiadomosci">
+          <WartoscAtrybutu>Tak</WartoscAtrybutu>
+        </AtrybutZalacznika>
+        <AtrybutZalacznika nazwaAtrybutu="NazwaZalacznika">
+          <WartoscAtrybutu>Treść wiadomości</WartoscAtrybutu>
+        </AtrybutZalacznika>
+        <AtrybutZalacznika nazwaAtrybutu="RozmiarZalacznika">
+          <WartoscAtrybutu>30</WartoscAtrybutu>
+        </AtrybutZalacznika>
+      </DaneZalacznika>
+      <DaneZalacznika>
+        <AtrybutZalacznika nazwaAtrybutu="IdZalacznika">
+          <WartoscAtrybutu>77777777-8888-9999-aaaa-bbbbbbbbbbb7</WartoscAtrybutu>
+        </AtrybutZalacznika>
+        <AtrybutZalacznika nazwaAtrybutu="TrescWiadomosci">
+          <WartoscAtrybutu>Nie</WartoscAtrybutu>
+        </AtrybutZalacznika>
+        <AtrybutZalacznika nazwaAtrybutu="NazwaZalacznika">
+          <WartoscAtrybutu>decyzja_testowa.pdf</WartoscAtrybutu>
+        </AtrybutZalacznika>
+        <AtrybutZalacznika nazwaAtrybutu="RozmiarZalacznika">
+          <WartoscAtrybutu>176433</WartoscAtrybutu>
+        </AtrybutZalacznika>
+      </DaneZalacznika>
+    </DaneZalaczniki>
+    <Stopka>Niniejszy dowód będący dokumentem elektronicznym jest zabezpieczony pieczęcią elektroniczną dostawcy usługi zaufania rejestrowanego doręczenia elektronicznego. Wydruk niniejszego dokumentu elektronicznego stanowi kopię dowodu.</Stopka>
+  </TrescDokumentu>
+  <ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#"/>
+</Dokument>

@@ -1,0 +1,8 @@
+tests/fixtures/Wiadomość EZD (Elektroniczne potwierdzenie odbioru - nieodebrana)(3).xml
+tests/fixtures/expected/Wiadomość EZD (Elektroniczne potwierdzenie odbioru - nieodebrana)(3).yaml
+tests/fixtures/ZW.224.1.856.2025 (Potwierdzenie otrzymania).xml
+tests/fixtures/Znak sprawy_ ZW.224.1.840.2025 (Potwierdzenie otrzymania).xml
+tests/fixtures/Znak sprawy_ ZW.224.1.932.2025 (Potwierdzenie otrzymania).xml
+tests/fixtures/expected/crd-zw-840-2025.yaml
+tests/fixtures/expected/crd-zw-856-2025.yaml
+tests/fixtures/expected/crd-zw-932-2025.yaml

@@ -1,0 +1,66 @@
+id: crd-osoba-prawna
+schema_variant: crd_potwierdzenie_otrzymania_v1
+expected_warnings: []
+document:
+  creation_date: null
+  document_title: Potwierdzenie otrzymania
+  shipments:
+  - tracking_number: PPSA-E-bbbb2222-cccc-3333-dddd-eeeeffff0002
+    dispatch_date: '2026-02-25T10:12:29+01:00'
+    reference: ZW.999.1.902.2026
+    kind: null
+    proof_id: 33333333-4444-5555-6666-777777777773
+    sender:
+      party_kind: osoba prawna
+      name: NADAWCA TESTOWY LP
+      edelivery_address: AE:PL-10001-10001-AAAAA-01
+    recipient:
+      name: URZĄD GMINY TESTOWA
+      postal_code: null
+      city: null
+      street: null
+      house_number: null
+      apartment: null
+      edelivery_address: AE:PL-20002-20002-BBBBB-02
+      party_kind: osoba prawna
+    delivery_event:
+      status_code: 0
+      non_delivery_code: 0
+      system_timestamp: null
+      awizo_at_parcel_location: 0
+      awizo_at_notice_location: 0
+      awizo_date_1: null
+      awizo_date_2: null
+      recipient_signature: null
+    operator:
+      first_name: null
+      last_name: null
+      post_office_name: null
+      post_office_address: null
+    postal_unit: null
+    attachments:
+    - attachment_id: PPSA-E-bbbb2222-cccc-3333-dddd-eeeeffff0002
+      name: Treść wiadomości
+      size_bytes: 30
+      is_message_body: true
+    - attachment_id: 44444444-5555-6666-7777-888888888884
+      name: ZW.999.1.902.2026.zalacznik_A.pdf
+      size_bytes: 360505
+      is_message_body: false
+    - attachment_id: 55555555-6666-7777-8888-999999999995
+      name: ZW.999.1.902.2026.zalacznik_B.pdf
+      size_bytes: 94671
+      is_message_body: false
+    edelivery_receipt:
+      description: Niniejszy dokument stanowi dowód otrzymania w rozumieniu art. 40
+        ustawy z dnia 18 listopada 2020 o doręczeniach elektronicznych
+      dispatch_date: '2026-02-25T10:12:29+01:00'
+      dispatch_acceptance_date: '2026-02-25T10:12:31+01:00'
+      made_available_date: '2026-02-25T10:12:34+01:00'
+      delivered_to_recipient_date: '2026-02-25T10:12:34+01:00'
+      delivery_mode: podstawowy
+      legal_footer: Niniejszy dowód będący dokumentem elektronicznym jest zabezpieczony
+        pieczęcią elektroniczną dostawcy usługi zaufania rejestrowanego doręczenia
+        elektronicznego. Wydruk niniejszego dokumentu elektronicznego stanowi kopię
+        dowodu.
+    has_outer_signature: true
